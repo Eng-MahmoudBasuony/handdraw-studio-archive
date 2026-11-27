@@ -1,0 +1,189 @@
+{
+  "dependencyKey": "478f726a0477544a",
+  "status": "completed",
+  "shots": [
+    {
+      "planId": "plan-0-stroke:left-0",
+      "targets": [
+        "stroke:left"
+      ],
+      "intervalUs": [
+        0,
+        1000000
+      ],
+      "keyframes": [
+        {
+          "offsetUs": 0,
+          "view": [
+            0.15,
+            0.5,
+            0.126984126984127
+          ],
+          "transition": "cut",
+          "durationUs": 0
+        }
+      ],
+      "reasons": [
+        "contextualView",
+        "cutNoLeadTime"
+      ],
+      "score": {
+        "readability": 2.0,
+        "context": 1.2,
+        "motion": 2.6288685663767297,
+        "occlusion": 0.0,
+        "reversal": 0.0,
+        "cut": 0.6,
+        "frequency": 0.0,
+        "constraint": 0.0
+      }
+    },
+    {
+      "planId": "plan-1000000-stroke:right-1-1",
+      "targets": [
+        "stroke:right-1"
+      ],
+      "intervalUs": [
+        1000000,
+        1550000
+      ],
+      "keyframes": [
+        {
+          "offsetUs": 0,
+          "view": [
+            0.85,
+            0.5,
+            0.126984126984127
+          ],
+          "transition": "cut",
+          "durationUs": 0
+        }
+      ],
+      "reasons": [
+        "contextualView",
+        "largeJumpCut"
+      ],
+      "score": {
+        "readability": 2.0,
+        "context": 1.2,
+        "motion": 6.835937499999999,
+        "occlusion": 0.0,
+        "reversal": 0.8,
+        "cut": 0.0,
+        "frequency": 0.0,
+        "constraint": 0.0
+      }
+    },
+    {
+      "planId": "plan-2000000-stroke:slightly-left-2",
+      "targets": [
+        "stroke:slightly-left"
+      ],
+      "intervalUs": [
+        1550000,
+        2550000
+      ],
+      "keyframes": [
+        {
+          "offsetUs": 0,
+          "view": [
+            0.79,
+            0.5,
+            0.126984126984127
+          ],
+          "transition": "cut",
+          "durationUs": 0
+        },
+        {
+          "offsetUs": 450000,
+          "view": [
+            0.79,
+            0.5,
+            0.126984126984127
+          ],
+          "transition": "move",
+          "durationUs": 450000
+        }
+      ],
+      "reasons": [
+        "contextualView",
+        "movedBeforeDrawing"
+      ],
+      "score": {
+        "readability": 2.0,
+        "context": 1.2,
+        "motion": 0.5859374999999994,
+        "occlusion": 0.0,
+        "reversal": 0.8,
+        "cut": 0.0,
+        "frequency": 0.0,
+        "constraint": 0.0
+      }
+    },
+    {
+      "planId": "plan-3000000-stroke:right-2-3",
+      "targets": [
+        "stroke:right-2"
+      ],
+      "intervalUs": [
+        2550000,
+        4000000
+      ],
+      "keyframes": [
+        {
+          "offsetUs": 0,
+          "view": [
+            0.85,
+            0.5,
+            0.126984126984127
+          ],
+          "transition": "cut",
+          "durationUs": 0
+        },
+        {
+          "offsetUs": 450000,
+          "view": [
+            0.85,
+            0.5,
+            0.126984126984127
+          ],
+          "transition": "move",
+          "durationUs": 450000
+        }
+      ],
+      "reasons": [
+        "contextualView",
+        "movedBeforeDrawing"
+      ],
+      "score": {
+        "readability": 2.0,
+        "context": 1.2,
+        "motion": 0.5859374999999994,
+        "occlusion": 0.0,
+        "reversal": 0.8,
+        "cut": 0.0,
+        "frequency": 2.0,
+        "constraint": 0.0
+      }
+    }
+  ],
+  "preserved": [],
+  "removedAuto": [],
+  "diagnostics": [
+    "unknown_hand_footprint",
+    "pan_speed_budget",
+    "zoom_speed_budget"
+  ],
+  "warnings": [],
+  "metrics": {
+    "shots": 4,
+    "moves": 2,
+    "cuts": 2,
+    "fades": 0,
+    "averageHoldUs": 1000000,
+    "reversals": 2,
+    "uncovered": 0,
+    "readabilityWarnings": 0,
+    "occlusionWarnings": 0
+  }
+}

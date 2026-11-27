@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "cases": {
+    "onePixel4kConnector": {
+      "width": 2400,
+      "height": 1200,
+      "minimumLeftCoverage": 0.15,
+      "minimumRightCoverage": 0.85,
+      "maximumVerticalError": 0.01
+    }
+  }
+}

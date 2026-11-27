@@ -1,0 +1,2472 @@
+{
+ "schemaVersion": 1,
+ "releases": [
+  {
+   "version": "1.20.2",
+   "buildNumber": 116,
+   "releaseDate": "2026-11-27",
+   "isCurrent": true,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Faster full-quality MOV export",
+      "ar": "تصدير MOV أسرع بالجودة الكاملة"
+     },
+     "description": {
+      "en": "Prepare the next frame while the native encoder processes the current one. Preserve frame order, transparency and drawing quality, with bounded buffering and safe cancellation.",
+      "ar": "تجهيز الإطار التالي أثناء تشفير الإطار الحالي، مع الحفاظ على ترتيب الإطارات والشفافية وجودة الرسم، وذاكرة مؤقتة محدودة وإلغاء آمن."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.20.1",
+   "buildNumber": 115,
+   "releaseDate": "2026-11-27",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Reliable projects and scene editing",
+      "ar": "حفظ موثوق وتحرير أفضل للمشاهد"
+     },
+     "description": {
+      "en": "Protect active projects during overlapping saves and opens. Improve scene hand initialization, text editing, small-window layouts and recovery from damaged library entries. Stop late Codex requests safely.",
+      "ar": "حماية المشروع الحالي عند تداخل الحفظ والفتح، وتحسين تهيئة اليد وتحرير النصوص والعرض في النوافذ الصغيرة والتعامل مع ملفات المكتبة التالفة، وإيقاف طلبات Codex المتأخرة بأمان."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.20.0",
+   "buildNumber": 114,
+   "releaseDate": "2026-09-10",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Scene designer and element library",
+      "ar": "مصمم المشاهد ومكتبة العناصر"
+     },
+     "description": {
+      "en": "Describe a vector scene with your Codex account, edit text, layout and timing, save categorized reusable elements and templates, then open an independent drawing timeline. Includes a free local Flutter example. This first version uses separated, non-overlapping elements.",
+      "ar": "صف مشهدًا عبر حساب Codex، وعدّل النصوص والتكوين والتوقيت، واحفظ العناصر بتصنيفات وقوالب قابلة لإعادة الاستخدام، ثم افتح تايملاين مستقلًا للرسم. يتضمن مثال Flutter محليًا بدون استهلاك. تدعم النسخة الأولى العناصر المنفصلة غير المتداخلة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.33",
+   "buildNumber": 113,
+   "releaseDate": "2026-09-10",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Trace letters instead of blank paper",
+      "ar": "رسم الحروف بدل المسارات الفارغة"
+     },
+     "description": {
+      "en": "New Codex writing paths exclude the sampled flat paper background and trace letter centerlines, avoiding invisible background strokes while preserving original source pixels.",
+      "ar": "مسارات الكتابة الجديدة تستبعد خلفية الورقة الموحدة من التحليل وتتتبع وسط الحروف، لمنع رسم مسارات فارغة مع الحفاظ على الصورة الأصلية."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.32",
+   "buildNumber": 112,
+   "releaseDate": "2026-09-09",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Complete text lines without early ink",
+      "ar": "كتابة السطر كاملًا بدون ظهور السطر التالي"
+     },
+     "description": {
+      "en": "Locally joins OCR word fragments on the same line and refines vertical ink bounds on flat backgrounds, preventing clipped commands and premature visibility of neighboring lines in new Codex plans.",
+      "ar": "يجمع كلمات السطر المتفرقة محليًا ويضبط حدود الحروف على الخلفيات الموحدة، لمنع قص الأوامر وظهور أجزاء من السطر التالي في خطط Codex الجديدة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.31",
+   "buildNumber": 111,
+   "releaseDate": "2026-09-09",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Quick coloring after each outline",
+      "ar": "تلوين سريع بعد حدود كل جزء"
+     },
+     "description": {
+      "en": "Draw and paint now fills each region with one clipped pen sweep immediately after its outline, preserving original colors, transparency and scene timing. Applies to newly prepared image paths and Codex plans.",
+      "ar": "الرسم والتلوين يلوّن كل جزء بضربة قلم واحدة بعد حدوده مباشرة، مع الحفاظ على ألوان الصورة والشفافية وتوقيت المشهد. يعمل عند تجهيز المسارات أو تنفيذ خطط Codex من جديد."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.30",
+   "buildNumber": 110,
+   "releaseDate": "2026-09-09",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Apply Codex drawing plans",
+      "ar": "إصلاح تنفيذ خطة Codex"
+     },
+     "description": {
+      "en": "White panel detection tolerates antialiasing around letters. Only text scheduled for writing is hidden, preserving window controls and other artwork. Manual Apply closes on success; local failures show their cause beside the button.",
+      "ar": "فحص الخلفية البيضاء يتحمّل الحواف الناعمة للحروف. يُخفى فقط النص المقرر كتابته مع الحفاظ على دوائر النافذة وباقي الصورة. التنفيذ اليدوي يغلق النافذة عند النجاح، وتظهر أسباب الفشل المحلي بجانب الزر."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.29",
+   "buildNumber": 109,
+   "releaseDate": "2026-09-09",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Automatic code improvements",
+      "ar": "تحسين كود البرنامج تلقائيًا"
+     },
+     "description": {
+      "en": "An optional local developer host gives Codex full user access without routine approval prompts. Needed code improvements run in a source snapshot, pass checks and a Release build, then apply only if your checkout has not changed. Open the new build after saving your project.",
+      "ar": "مشغّل تطوير محلي اختياري يمنح Codex صلاحيات المستخدم الكاملة بدون طلبات تأكيد روتينية. تُنفّذ تحسينات الكود اللازمة في نسخة مستقلة، وتُفحص وتُبنى قبل اعتمادها إذا لم يتغيّر المشروع الأصلي. افتح النسخة الجديدة بعد حفظ مشروعك."
+     }
+    },
+    {
+     "type": "fix",
+     "title": {
+      "en": "Correct Codex allowance check",
+      "ar": "تصحيح فحص باقة Codex"
+     },
+     "description": {
+      "en": "Incomplete quota details for text-only Spark no longer block image models. Sending rechecks the main Codex allowance instead of leaving the button disabled on stale data.",
+      "ar": "بيانات الحصة الناقصة لنموذج Spark النصي لم تعد تمنع نماذج الصور. يعيد زر الإرسال فحص حصة Codex الأساسية بدل تعطيله بسبب بيانات قديمة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.28",
+   "buildNumber": 108,
+   "releaseDate": "2026-09-09",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Draw with Codex",
+      "ar": "ارسم مع Codex"
+     },
+     "description": {
+      "en": "Link a personal Codex account and describe the order of image parts. Review or apply the plan as editable timeline blocks with local drawing, text tracing and Undo. Subscription allowance is verified before requests; API keys and credit-funded requests are blocked.",
+      "ar": "اربط حساب Codex شخصي واكتب ترتيب رسم أجزاء الصورة. راجع الخطة أو نفّذها كبلوكات قابلة للتعديل مع رسم محلي وكتابة سطور الصورة والتراجع. يُفحص المتبقي قبل الطلب؛ مفاتيح API والطلبات باستخدام رصيد إضافي غير مدعومة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.27",
+   "buildNumber": 107,
+   "releaseDate": "2026-09-09",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Draw selected image parts",
+      "ar": "رسم أجزاء محددة من الصورة"
+     },
+     "description": {
+      "en": "In Draw my own, circle image parts and arrange their order. Each part gets its own masked timeline thumbnail and draws before the next, with Undo support.",
+      "ar": "من «أرسمها بنفسي»، حدّد أجزاء الصورة بدوائر ورتّبها. لكل جزء بلوك بصورة مصغّرة تعرض محتواه فقط، ويُرسم قبل الجزء التالي مع إمكانية التراجع."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.26",
+   "buildNumber": 106,
+   "releaseDate": "2026-09-06",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Clear application cache",
+      "ar": "مسح كاش التطبيق"
+     },
+     "description": {
+      "en": "Clear disposable display caches and old unused staging sessions from the app menu, preserving projects, hand assets and active session files.",
+      "ar": "مسح كاش العرض والجلسات المؤقتة القديمة غير المستخدمة من قائمة التطبيق، مع الحفاظ على المشاريع ومكتبة الإيد وملفات الجلسات النشطة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.25",
+   "buildNumber": 105,
+   "releaseDate": "2026-09-06",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Single pen image reveal",
+      "ar": "كشف الصورة بضربة قلم"
+     },
+     "description": {
+      "en": "A third effect reveals original image colors behind the pen in one continuous pass, retaining transparency and editable direction with shared preview/export timing.",
+      "ar": "تأثير ثالث يكشف ألوان الصورة الأصلية خلف القلم بتمريرة واحدة متصلة، مع الحفاظ على الشفافية وإمكانية عكس الاتجاه وتوحيد توقيت المعاينة والتصدير."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.24",
+   "buildNumber": 104,
+   "releaseDate": "2026-09-06",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Calmer hand movement between letters",
+      "ar": "حركة أهدأ للإيد بين الحروف"
+     },
+     "description": {
+      "en": "Reduce wrist articulation and adapt pen lifts to the distance between strokes in image animation, preserving nib contact, timing and shared preview/export rendering.",
+      "ar": "تقليل دوران الرسغ وجعل ارتفاع القلم متناسبًا مع المسافة بين الضربات أثناء تحريك الصور، مع الحفاظ على تطابق سن القلم والتوقيت في المعاينة والتصدير."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.23",
+   "buildNumber": 103,
+   "releaseDate": "2026-09-06",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Image animation follows scene duration",
+      "ar": "تطبيق مدة المشهد على تحريك الصورة"
+     },
+     "description": {
+      "en": "Changing duration immediately retimes drawing, reveal, hand movements and pauses together. The field shows the resolved drawing duration, with shared preview/export timing and undo support.",
+      "ar": "تغيير المدة يحدّث توقيت الرسم والكشف وحركة الإيد والتوقفات مباشرة. تعرض الخانة مدة الرسم الفعلية، مع توحيد توقيت المعاينة والتصدير وإمكانية التراجع."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.22",
+   "buildNumber": 102,
+   "releaseDate": "2026-09-06",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Responsive drawing preview",
+      "ar": "إصلاح تعليق معاينة الرسم"
+     },
+     "description": {
+      "en": "Reuse immutable project fingerprints and timing calculations during playback and scrubbing, preserving stroke detail and shared preview/export timing. Reset the playback counter and playhead correctly when replaying a scene.",
+      "ar": "إعادة استخدام بصمة المشروع وحسابات التوقيت أثناء المعاينة وتحريك المؤشر، مع الحفاظ على تفاصيل المسارات وتطابق توقيت المعاينة والتصدير. تحديث عداد الوقت والمؤشر بشكل صحيح عند إعادة تشغيل المشهد."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.21",
+   "buildNumber": 101,
+   "releaseDate": "2026-09-06",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Draw and paint in the main editor",
+      "ar": "الرسم والتلوين داخل المحرر الرئيسي"
+     },
+     "description": {
+      "en": "Prepare and edit image strokes on the project canvas with shared background, timeline, preview and MOV export. Reverse, reorder, delete and undo strokes; import earlier drawing experiments into regular project files.",
+      "ar": "جهّز مسارات الصورة وعدّلها على كانفز المشروع، بنفس الخلفية والخط الزمني والمعاينة وتصدير MOV. اعكس الضربات ورتّبها واحذفها مع التراجع، وافتح ملفات تجارب الرسم السابقة داخل المشروع."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.20",
+   "buildNumber": 100,
+   "releaseDate": "2026-09-02",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Hand settings now follow you across projects",
+      "ar": "إعدادات اليد ثابتة عبر كل المشاريع"
+     },
+     "description": {
+      "en": "The selected hand, video size, rotation, direction, pen-tip calibration, and final-hand visibility are now saved as application defaults. Opening or creating another project keeps those choices, while slider changes are written only after dragging ends to preserve editor performance.",
+      "ar": "تُحفظ الآن اليد المختارة وحجمها في الفيديو ودورانها واتجاهها ومعايرة سن القلم وإعداد ظهورها عند النهاية كإعدادات افتراضية للتطبيق. يحتفظ أي مشروع تفتحه أو تنشئه بهذه الاختيارات، ولا يُكتب تغيير السلايدر على القرص إلا بعد انتهاء السحب للحفاظ على سرعة المحرر."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.19",
+   "buildNumber": 99,
+   "releaseDate": "2026-09-02",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "The hand now obeys the final-frame setting",
+      "ar": "اليد تلتزم الآن بإعداد الفريم الأخير"
+     },
+     "description": {
+      "en": "Preview and MOV export now resolve the exact terminal timeline state instead of freezing the last in-motion video sample. With Keep hand visible after drawing off, the hand disappears at the end; when enabled, it remains at the final nib position as requested.",
+      "ar": "تحل المعاينة وتصدير MOV الآن حالة نهاية الخط الزمني الدقيقة بدل تجميد آخر فريم حركة قبل النهاية. عند إغلاق «إبقاء اليد ظاهرة بعد الرسم» تختفي اليد في النهاية، وعند تشغيله تبقى عند آخر موضع لسن القلم كما هو مطلوب."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.18",
+   "buildNumber": 98,
+   "releaseDate": "2026-09-02",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Visible final-hand control",
+      "ar": "تحكم واضح في ظهور اليد عند النهاية"
+     },
+     "description": {
+      "en": "The Hand inspector now has a direct switch for keeping the hand visible after drawing. It is off by default, so the final hand disappears naturally; enable it only when a held final pose is wanted. Preview and MOV export use the same saved choice.",
+      "ar": "يحتوي تبويب اليد الآن على مفتاح مباشر لإبقاء اليد ظاهرة بعد الرسم. يكون مغلقًا افتراضيًا فتختفي اليد طبيعيًا عند النهاية، ويمكن تشغيله فقط عند الحاجة إلى تثبيت الوضع الأخير. تستخدم المعاينة وتصدير MOV الاختيار المحفوظ نفسه."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.17",
+   "buildNumber": 97,
+   "releaseDate": "2026-09-02",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Hand selection and pen tip stay synchronized",
+      "ar": "تزامن اختيار اليد مع موضع سن القلم"
+     },
+     "description": {
+      "en": "Importing artwork no longer keeps one hand image and label while silently resetting the project to another hand's pen-tip anchor. Manual Draw & Reveal also repairs an already-open mismatched session before the first stroke, and the calibration dialog opens on the selected hand's actual nib.",
+      "ar": "لم يعد استيراد الرسم يحتفظ بصورة واسم يد بينما يعيد المشروع سرًا إلى موضع سن قلم يد أخرى. كما يُصلح الرسم والكشف اليدوي أي جلسة مفتوحة غير متطابقة قبل أول مسار، وتفتح نافذة المعايرة على السن الحقيقي لليد المختارة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.16",
+   "buildNumber": 96,
+   "releaseDate": "2026-09-02",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Correct pen-tip defaults for every hand",
+      "ar": "معايرة افتراضية صحيحة لكل يد"
+     },
+     "description": {
+      "en": "Manual Draw & Reveal now starts from the calibrated nib anchor of the active hand. Resetting settings no longer combines one hand with another hand's pen-tip coordinates, and older cross-preset defaults are repaired without replacing deliberate custom calibration.",
+      "ar": "يبدأ الرسم والكشف اليدوي الآن من موضع سن القلم المُعاير لليد النشطة. لم تعد إعادة الإعدادات تدمج يدًا مع إحداثيات سن قلم يد أخرى، كما تُصلح القيم الافتراضية القديمة المتداخلة دون استبدال أي معايرة مخصصة مقصودة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.15",
+   "buildNumber": 95,
+   "releaseDate": "2026-09-02",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Optional hand hold after drawing",
+      "ar": "إبقاء اليد ظاهرة بعد الرسم"
+     },
+     "description": {
+      "en": "A new per-section timing toggle can keep the hand fixed at the final pen position after drawing finishes. The choice is saved with the project and behaves identically in Preview and MOV export.",
+      "ar": "يتيح مفتاح جديد في توقيت كل مقطع إبقاء اليد ثابتة عند آخر موضع لسن القلم بعد انتهاء الرسم. يُحفظ الاختيار مع المشروع ويعمل بالطريقة نفسها في المعاينة وتصدير MOV."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.14",
+   "buildNumber": 94,
+   "releaseDate": "2026-09-02",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Section timing follows overall drawing speed",
+      "ar": "توقيت المقطع يتبع سرعة الرسم العامة"
+     },
+     "description": {
+      "en": "A saved section duration now acts as its 1× baseline instead of bypassing the overall drawing-speed control. The resolved clip duration combines overall and per-section speed once, so the timeline, section dialog, Preview, audio, and MOV export report and use the same real time.",
+      "ar": "تعمل مدة المقطع المحفوظة الآن كمدته الأساسية عند ×1 بدل تجاوز تحكم سرعة الرسم العامة. تُحسب مدة المقطع الفعلية من السرعة العامة وسرعة المقطع مرة واحدة، لذلك يعرض ويستخدم التايم لاين ونافذة المقطع والمعاينة والصوت وتصدير MOV الزمن الحقيقي نفسه."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.13",
+   "buildNumber": 93,
+   "releaseDate": "2026-09-02",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Reference-matched hand reveal speed",
+      "ar": "سرعة كشف اليد مطابقة للمرجع"
+     },
+     "description": {
+      "en": "Auto Reveal and ordered scenes now use the measured VideoScribe reference pace: the hand travels only across each content region, alternates left and right between regions, exits cleanly after the final pass, and leaves the completed artwork on screen. Preview and MOV export use the same exact schedule.",
+      "ar": "يستخدم الكشف التلقائي والمشاهد المرتبة الآن الإيقاع المقاس من مرجع VideoScribe: تتحرك اليد على عرض كل منطقة محتوى فقط، وتتبادل الاتجاه يمينًا ويسارًا بين المناطق، ثم تخرج بسلاسة بعد آخر حركة مع بقاء الرسم النهائي ظاهرًا. تستخدم المعاينة وتصدير MOV الجدول الزمني نفسه بدقة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.12",
+   "buildNumber": 92,
+   "releaseDate": "2026-09-02",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Broad reveal brushes stay behind the nib",
+      "ar": "فرشاة الكشف العريضة تبقى خلف سن القلم"
+     },
+     "description": {
+      "en": "The active manual reveal brush now has a fixed writing-direction frontier at the real pen nib. Even a 708px or 960px brush keeps artwork hidden ahead of the hand while preserving the accumulated reveal behind it in both Preview and MOV export.",
+      "ar": "أصبحت فرشاة الكشف اليدوي النشطة محددة بحافة ثابتة في اتجاه الكتابة عند سن القلم الحقيقي. حتى مع عرض 708px أو 960px تظل الصورة مخفية أمام اليد مع الحفاظ على الكشف المتراكم خلفها في المعاينة وتصدير MOV."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.11",
+   "buildNumber": 91,
+   "releaseDate": "2026-09-02",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Revealed artwork never disappears behind the hand",
+      "ar": "الرسم المكشوف لا يختفي خلف اليد"
+     },
+     "description": {
+      "en": "Smart Scene Split now uses one monotonic directional writing pass inside every authored scene mask instead of an oversized circular scratch path. Artwork remains permanently revealed behind the nib, never appears ahead of it, and existing broad scene projects migrate to the same Preview and MOV behavior.",
+      "ar": "يستخدم تقسيم المشاهد الذكي الآن حركة كتابة اتجاهية واحدة ومتراكمة داخل قناع كل مشهد بدل مسار كشط دائري ضخم. يظل الرسم ظاهرًا خلف سن القلم ولا يظهر أمامه، وتنتقل مشروعات المشاهد العريضة القديمة تلقائيًا إلى السلوك نفسه في المعاينة وتصدير MOV."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.10",
+   "buildNumber": 90,
+   "releaseDate": "2026-09-02",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Reveal now ends exactly at the pen nib",
+      "ar": "الكشف ينتهي الآن عند سن القلم بدقة"
+     },
+     "description": {
+      "en": "The active reveal brush is clipped at the pen nib along its real writing direction. Artwork stays hidden in front of the hand and appears only behind the nib, including with very broad brushes, while Preview and MOV export share the exact same mask.",
+      "ar": "يُقص قناع فرشاة الكشف النشطة الآن عند سن القلم وفق اتجاه الكتابة الحقيقي. تظل الصورة مخفية أمام اليد وتظهر خلف السن فقط حتى مع الفرش العريضة جدًا، وتستخدم المعاينة وتصدير MOV القناع نفسه بدقة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.9",
+   "buildNumber": 89,
+   "releaseDate": "2026-09-02",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Reveal brush up to 960px",
+      "ar": "فرشاة كشف تصل إلى 960px"
+     },
+     "description": {
+      "en": "The manual Draw & Reveal brush can now reach 960px directly from the toolbar, making it easier to uncover large title lines with one authored gesture while Preview and MOV keep the same exact reveal width.",
+      "ar": "يمكن الآن تكبير فرشاة الرسم والكشف اليدوي حتى 960px مباشرة من شريط الأدوات، لتغطية سطور العناوين الكبيرة بحركة واحدة مع احتفاظ المعاينة وتصدير MOV بعرض الكشف نفسه بدقة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.8",
+   "buildNumber": 88,
+   "releaseDate": "2026-09-02",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Faster overall drawing up to 8×",
+      "ar": "سرعة رسم عامة تصل إلى ×8"
+     },
+     "description": {
+      "en": "Overall drawing speed now reaches 8× with a new 4× quick preset. Drawing time becomes shorter while pen travel, pauses, entrance and exit motion, Preview, audio, and MOV export remain synchronized on the shared timeline.",
+      "ar": "تصل سرعة الرسم العامة الآن إلى ×8 مع زر سريع جديد ×4. تقل مدة الرسم مع بقاء انتقال القلم والوقفات وحركة الدخول والخروج والمعاينة والصوت وتصدير MOV متزامنة على الخط الزمني المشترك."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.7",
+   "buildNumber": 87,
+   "releaseDate": "2026-09-02",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Fast, ordered VideoScribe-style scene drawing",
+      "ar": "رسم مشاهد سريع ومرتب بأسلوب VideoScribe"
+     },
+     "description": {
+      "en": "Smart Scene Split no longer launches dense Auto Path analysis that could create thousands of paths. Every confirmed scene now uses one broad masked writing path in its authored order, with a large side-on hand, exact nib contact, gentle writing drift, edge entrance and exit, and a hidden transition between scenes. Preview and MOV export use the same timing and geometry.",
+      "ar": "لم يعد تقسيم المشاهد الذكي يشغّل تحليل المسارات التلقائية الكثيف الذي كان قد ينشئ آلاف المسارات. يستخدم كل مشهد مؤكد الآن مسار كتابة عريضًا واحدًا داخل قناعه وبالترتيب المحدد، مع يد جانبية كبيرة وسن قلم مطابق للكشف وحركة كتابة خفيفة ودخول وخروج من الحافة وانتقال مخفي بين المشاهد. تستخدم المعاينة وتصدير MOV التوقيت والهندسة نفسيهما."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.6",
+   "buildNumber": 86,
+   "releaseDate": "2026-09-02",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Broader reveal with natural writing motion",
+      "ar": "كشف أوسع وحركة كتابة طبيعية"
+     },
+     "description": {
+      "en": "Draw & Reveal now starts with a broad title-sized brush and lets you widen the selected manual stroke directly. During Preview and MOV export, the hand gently follows the local pen direction and rocks around the calibrated nib instead of sliding rigidly in a straight line, while the pen tip remains exactly on the reveal path.",
+      "ar": "تبدأ أداة الرسم والكشف الآن بفرشاة عريضة تناسب سطر العنوان، ويمكنك تكبير المسار اليدوي المحدد مباشرة. أثناء المعاينة وتصدير MOV تتبع اليد اتجاه القلم محليًا وتتمايل طبيعيًا حول سن القلم بدل الانزلاق بشكل جامد في خط مستقيم، مع بقاء السن مطابقًا لمسار الكشف بدقة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.5",
+   "buildNumber": 85,
+   "releaseDate": "2026-09-02",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Draw and reveal artwork by hand",
+      "ar": "ارسم واكشف الصورة يدويًا"
+     },
+     "description": {
+      "en": "The new Draw & Reveal tool records the exact authored hand order without Auto Path. Every editable stroke keeps its own reveal-brush width, shows the real reveal area while drawing, joins the selected scene in place, and drives the same timeline used by Preview and MOV export.",
+      "ar": "تسجل أداة الرسم والكشف اليدوي الجديدة ترتيب حركة اليد الذي ترسمه مباشرة من دون المسارات التلقائية. يحتفظ كل مسار قابل للتعديل بعرض فرشاة الكشف الخاص به، ويعرض مساحة الكشف الحقيقية أثناء الرسم، وينضم إلى المشهد المحدد في موضعه، ويقود الخط الزمني نفسه في المعاينة وتصدير MOV."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.4",
+   "buildNumber": 84,
+   "releaseDate": "2026-09-02",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Scenes now draw in their authored order",
+      "ar": "المشاهد تُرسم الآن بالترتيب المحدد"
+     },
+     "description": {
+      "en": "Smart Scene Split now finishes Scene 1 before Scene 2 and preserves Auto Path's natural semantic reading order inside every scene. Generated analyzer fragments can no longer make the hand jump back to earlier artwork after later content has appeared, and Preview and MOV use the same sequential schedule.",
+      "ar": "يُكمل التقسيم الذكي الآن المشهد الأول قبل الانتقال إلى الثاني، ويحافظ داخل كل مشهد على ترتيب القراءة الطبيعي للمسارات التلقائية. لم تعد أجزاء التحليل المولدة تجعل اليد تعود إلى رسم سابق بعد ظهور محتوى لاحق، وتستخدم المعاينة وMOV الجدول المتسلسل نفسه."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.3",
+   "buildNumber": 83,
+   "releaseDate": "2026-09-02",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Scene Split analyzes artwork only once",
+      "ar": "تقسيم المشاهد يحلل الرسم مرة واحدة"
+     },
+     "description": {
+      "en": "Confirming several Smart Scene Split regions now runs OCR and Auto Path once over their shared precise mask, then assigns the exact generated paths back to the ordered scenes. Small images no longer repeat the complete analysis for every scene, while Preview and MOV keep each scene's authored mask.",
+      "ar": "يُشغّل تأكيد عدة مناطق في التقسيم الذكي الآن OCR وAuto Path مرة واحدة فوق القناع الدقيق المشترك، ثم يوزع المسارات الناتجة على المشاهد المرتبة. لم تعد الصور الصغيرة تكرر التحليل الكامل لكل مشهد، مع احتفاظ المعاينة وMOV بالقناع المحدد لكل مشهد."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.2",
+   "buildNumber": 82,
+   "releaseDate": "2026-08-31",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Faster dense playback and MOV export",
+      "ar": "تشغيل وتصدير أسرع للمشاهد الكثيفة"
+     },
+     "description": {
+      "en": "Preview now resolves visual frames at the project's exact frame rate instead of repeating expensive work at the display refresh rate. MOV export streams full-resolution RGBA frames directly into ProRes 4444, removing per-frame PNG compression, temporary frame files, and native PNG decoding without changing paths, timing, alpha, or image quality.",
+      "ar": "تعالج المعاينة الآن الفريمات المرئية بمعدل إطارات المشروع الدقيق بدل تكرار العمل المكلف مع معدل تحديث الشاشة. ويرسل تصدير MOV فريمات RGBA كاملة الدقة مباشرة إلى ProRes 4444، ليلغي ضغط PNG لكل فريم وملفات الفريمات المؤقتة وفك PNG داخل macOS دون تغيير المسارات أو التوقيت أو الشفافية أو جودة الصورة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.1",
+   "buildNumber": 81,
+   "releaseDate": "2026-08-31",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Fast, controllable Smart Scene Split",
+      "ar": "تقسيم مشاهد أسرع وتحت تحكمك"
+     },
+     "description": {
+      "en": "Large detailed images now create and play scenes without repeatedly rebuilding thousands of paths: analysis buffers transfer compactly, result decoding is cancellable and batched, path planning runs away from the UI thread, shared masks stay canonical after save and reopen, and reveal chunks prewarm within a frame budget. Smart Scene Split adds a visible horizontal scrollbar and a reversible Start manually action that cancels suggestions, clears them, and switches directly to Lasso, while every confirmed region keeps the normal precise Auto Path behavior in Preview and MOV.",
+      "ar": "أصبح إنشاء وتشغيل مشاهد الصور الكبيرة كثيرة التفاصيل أكثر سلاسة: تنتقل بيانات التحليل بصورة مضغوطة، ويجري فك النتائج على دفعات قابلة للإلغاء، ويعمل تخطيط المسارات بعيدًا عن واجهة المستخدم، وتظل الأقنعة المشتركة موحدة بعد الحفظ وإعادة الفتح، وتُجهز أجزاء الإظهار تدريجيًا ضمن ميزانية الإطار. يضيف التقسيم الذكي شريط تمرير أفقيًا ظاهرًا وخيار ابدأ يدويًا القابل للتراجع، لإلغاء الاقتراحات ومسحها والانتقال مباشرة إلى اللاسو، مع احتفاظ كل منطقة مؤكدة بسلوك المسارات التلقائية الدقيق المعتاد في المعاينة وMOV."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.19.0",
+   "buildNumber": 80,
+   "releaseDate": "2026-08-31",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Professional canvas backgrounds",
+      "ar": "خلفيات احترافية للكانفز"
+     },
+     "description": {
+      "en": "Choose transparent, white, black, a custom solid color, or ten resolution-independent surfaces including notebook, graph, chalkboard, blueprint, kraft, and linen. The background is saved with the project, supports Undo and Redo, and is rendered identically in the canvas, camera Preview, and MOV export.",
+      "ar": "اختر خلفية شفافة أو بيضاء أو سوداء أو لونًا مخصصًا، أو واحدًا من عشرة أسطح مستقلة عن الدقة مثل الدفتر وورق المربعات والسبورة والمخطط الهندسي والكرافت والكتان. تُحفظ الخلفية مع المشروع، وتدعم التراجع والإعادة، وتُرسم بالطريقة نفسها في الكانفز ومعاينة الكاميرا وتصدير MOV."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.18.0",
+   "buildNumber": 79,
+   "releaseDate": "2026-08-31",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Smart Scene Split before Auto Path",
+      "ar": "تقسيم ذكي للمشاهد قبل المسارات التلقائية"
+     },
+     "description": {
+      "en": "Scene Planner can now suggest transparent artwork regions before Auto Path. Refine the plan with Lasso, Merge, Split, Delete, Undo, and drag-to-reorder, then create real timeline sections. Every region is traced independently and its precise mask is shared by Preview and MOV.",
+      "ar": "يستطيع مخطط المشاهد الآن اقتراح مناطق الرسم الشفاف قبل تشغيل المسارات التلقائية. يمكنك تعديل الخطة باللاسو والدمج والفصل والحذف والتراجع والسحب لإعادة الترتيب، ثم إنشاء أقسام حقيقية في التايم لاين. تُحلل كل منطقة منفردة ويستخدم كل من المعاينة وMOV قناعها الدقيق نفسه."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.32",
+   "buildNumber": 78,
+   "releaseDate": "2026-08-31",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "A cleaner Project inspector",
+      "ar": "لوحة مشروع أبسط وأكثر وضوحًا"
+     },
+     "description": {
+      "en": "The Project tab now focuses on artwork placement and export. Duplicate timing, hand, and import actions remain in their canonical Animation, Hand, and toolbar locations, while import intent and fit controls are compact and exact position and size values stay available on demand.",
+      "ar": "يركز تبويب المشروع الآن على موضع الرسم والتصدير. تظل إعدادات التوقيت واليد والاستيراد في أماكنها الأساسية داخل الحركة واليد وشريط الأدوات، بينما أصبحت طريقة الاستيراد والملاءمة أكثر اختصارًا وتبقى قيم الموضع والحجم الدقيقة متاحة عند الحاجة."
+     }
+    },
+    {
+     "type": "fix",
+     "title": {
+      "en": "Dense Auto Path playback no longer freezes",
+      "ar": "تشغيل المسارات التلقائية الكثيفة بدون تجمّد"
+     },
+     "description": {
+      "en": "Path validation now reports real progress and uses an exact allocation-efficient coverage pass. Preview and MOV cache completed geometry and composite identical brush masks in reusable chunks, keeping highly detailed scenes responsive without reducing path count, geometry, reveal width, or final drawing accuracy.",
+      "ar": "يعرض فحص المسارات الآن تقدمًا حقيقيًا ويستخدم فحص تغطية مطابقًا وأقل استهلاكًا للذاكرة. تعيد المعاينة وMOV استخدام الهندسة المكتملة وتجمع أقنعة الفرشاة المتطابقة في دفعات مخزنة، لتظل المشاهد شديدة التفاصيل مستجيبة دون تقليل عدد المسارات أو هندستها أو عرض الإظهار أو دقة الرسم النهائية."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.31",
+   "buildNumber": 77,
+   "releaseDate": "2026-08-31",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Detailed Auto Path previews stay responsive",
+      "ar": "معاينة المسارات التلقائية الكثيفة تظل سريعة"
+     },
+     "description": {
+      "en": "Projects with hundreds of generated paths no longer thrash the geometry cache or rebuild the complete motion schedule every frame. Preview and MOV reuse the exact compiled paths and reveal ordering, preserving drawing detail while keeping dense 512+ path scenes responsive.",
+      "ar": "لم تعد المشاريع التي تحتوي على مئات المسارات المولدة تعيد تفريغ كاش الهندسة أو بناء جدول الحركة كاملًا في كل إطار. تعيد المعاينة وMOV استخدام نفس المسارات المترجمة وترتيب الإظهار بدقة، مع الحفاظ على تفاصيل الرسم واستجابة المشاهد التي تتجاوز 512 مسارًا."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.30",
+   "buildNumber": 76,
+   "releaseDate": "2026-08-30",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Compact professional timing workspace",
+      "ar": "واجهة توقيت احترافية ومدمجة"
+     },
+     "description": {
+      "en": "Timing & Reveal now leads with a live duration and speed summary, keeps drawing controls immediately available, and progressively discloses start and end behavior only when needed. Configured stages open automatically, controls remain responsive in Arabic RTL and English LTR, and all values continue to drive the shared Preview and MOV schedule.",
+      "ar": "تبدأ واجهة التوقيت والإظهار الآن بملخص مباشر للمدة والسرعة، مع إبقاء تحكمات الرسم متاحة فورًا وإظهار إعدادات البداية والنهاية عند الحاجة فقط. تُفتح المراحل المضبوطة تلقائيًا، وتظل الواجهة متجاوبة بالعربية RTL والإنجليزية LTR، مع استمرار كل القيم في تشغيل جدول المعاينة وMOV المشترك."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.29",
+   "buildNumber": 75,
+   "releaseDate": "2026-08-30",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Saved section speed now drives hand preview",
+      "ar": "سرعة المقطع المحفوظة تتحكم الآن في معاينة اليد"
+     },
+     "description": {
+      "en": "Isolated timeline-section previews no longer use a fixed 1.4-second playback. Each stroke now inherits its exact saved drawing time from the shared production schedule, so 0.25×, custom durations, full Preview, and MOV export keep the hand and reveal synchronized.",
+      "ar": "لم تعد معاينة مقطع التايم لاين المنفرد تستخدم زمنًا ثابتًا قدره 1.4 ثانية. يرث كل مسار الآن زمن الرسم المحفوظ الفعلي من الجدول المشترك، لذلك تظل اليد والإظهار متزامنين مع 0.25× والمدد المخصصة والمعاينة الكاملة وتصدير MOV."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.28",
+   "buildNumber": 74,
+   "releaseDate": "2026-08-30",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Every hand stays locked to its real pen tip",
+      "ar": "كل يد ثابتة على سن القلم الحقيقي"
+     },
+     "description": {
+      "en": "All eight bundled hands now use image-specific nib calibration measured from their source pixels. The same normalized anchor remains exact across hand size, rotation, direction reversal, Preview, and MOV export, while the selected hand, scale, rotation, flip, and calibration are preserved in the project. Previously shipped anchors migrate without replacing deliberate custom calibration.",
+      "ar": "تستخدم الأيدي الثماني المدمجة الآن معايرة مستقلة لسن القلم مقاسة من بكسلات كل صورة. تظل النقطة نفسها دقيقة مع تغيير حجم اليد والدوران وعكس الاتجاه وفي المعاينة وتصدير MOV، مع حفظ اليد المختارة والحجم والدوران والعكس والمعايرة داخل المشروع. تُحدّث المعايرات القديمة دون استبدال أي معايرة مخصصة مقصودة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.27",
+   "buildNumber": 73,
+   "releaseDate": "2026-08-30",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Independent drawing speed for every section",
+      "ar": "سرعة رسم مستقلة لكل مقطع"
+     },
+     "description": {
+      "en": "Each timeline section now has clear 0.25×, 0.5×, 1×, 1.5×, and 2× drawing-speed presets plus a custom 0.25×–4× control. Speed and exact duration update each other immediately and drive the shared timeline, Preview, audio timing, and MOV export without changing existing projects.",
+      "ar": "أصبح لكل مقطع في التايم لاين سرعات رسم واضحة 0.25× و0.5× و1× و1.5× و2×، بالإضافة إلى تحكم مخصص من 0.25× إلى 4×. تتزامن السرعة والمدة الدقيقة فورًا وتتحكمان في التايم لاين والمعاينة وتوقيت الصوت وتصدير MOV المشترك، دون تغيير المشاريع الحالية."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.26",
+   "buildNumber": 72,
+   "releaseDate": "2026-08-30",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Large front-facing black marker hand",
+      "ar": "يد ماركر سوداء أمامية كبيرة"
+     },
+     "description": {
+      "en": "The Hand Library now includes a large front-facing right hand with a thick black chisel marker, a calibrated visible nib, and a bottom-center arm fade. Its 85% default video size matches bold whiteboard presentations, the size control now reaches 90%, and Preview and MOV render it identically.",
+      "ar": "تتضمن مكتبة الأيدي الآن يدًا يمنى أمامية كبيرة تمسك ماركر أسود سميكًا بسن ظاهر ومعاير، مع تلاشي الذراع من منتصف الحافة السفلية. يطابق حجمها الافتراضي 85% عروض الوايت بورد الواضحة، ويصل التحكم في الحجم الآن إلى 90%، وتظهر بصورة متطابقة في المعاينة وMOV."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.25",
+   "buildNumber": 71,
+   "releaseDate": "2026-08-30",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Smart Region Reveal for background images",
+      "ar": "إظهار ذكي بالمناطق للصور ذات الخلفية"
+     },
+     "description": {
+      "en": "Auto Reveal now compares Adaptive, Canny+, and Morph Shell detail analysis, then reveals broad overlapping regions around useful detail before completing the background. It no longer turns detected edges into scattered dashes or follows them with a full-frame curtain. Low-confidence analysis keeps the proven fallback, while Preview and MOV remain on one shared timeline and renderer.",
+      "ar": "يقارن الإظهار التلقائي الآن بين تحليل التفاصيل Adaptive وCanny+ وMorph Shell، ثم يكشف مناطق عريضة ومتداخلة حول التفاصيل المهمة قبل استكمال الخلفية. لم يعد يحول الحواف المكتشفة إلى شرطات متناثرة أو يتبعها بستارة تغطي الإطار. تحتفظ التحليلات منخفضة الثقة بالبديل الموثوق، مع بقاء المعاينة وMOV على نفس التايم لاين ومحرك الرسم المشترك."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.24",
+   "buildNumber": 70,
+   "releaseDate": "2026-08-30",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Hand size is now adjustable from the library",
+      "ar": "يمكن الآن ضبط حجم اليد من المكتبة"
+     },
+     "description": {
+      "en": "The Hand Library now includes a live percentage control for the hand's video size and a preset reset action. The selected value is stored in the project and used without hidden clamping by both Preview and MOV export.",
+      "ar": "تتضمن مكتبة الأيدي الآن تحكمًا مباشرًا بالنسبة المئوية لحجم اليد في الفيديو وزرًا للعودة إلى حجم اليد الافتراضي. تُحفظ القيمة المختارة في المشروع وتُستخدم دون تقييد مخفي في المعاينة وتصدير MOV."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.23",
+   "buildNumber": 69,
+   "releaseDate": "2026-08-30",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "True VideoScribe-style reveal for background images",
+      "ar": "كشف حقيقي بأسلوب VideoScribe للصور ذات الخلفية"
+     },
+     "description": {
+      "en": "Opaque background images are now revealed from top to bottom with clear, overlapping diagonal hand strokes instead of a nearly horizontal curtain. Preview and MOV export continue to share the same coverage path.",
+      "ar": "تُكشف الصور ذات الخلفية غير الشفافة الآن من أعلى لأسفل بضربات يد قطرية واضحة ومتداخلة بدل ظهورها كستارة أفقية تقريبًا، مع استمرار المعاينة وتصدير MOV في استخدام مسار التغطية نفسه."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.22",
+   "buildNumber": 68,
+   "releaseDate": "2026-08-30",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Fewer, broader image reveal passes",
+      "ar": "مسحات أقل وأعرض لإظهار الصورة"
+     },
+     "description": {
+      "en": "The continuous opaque-image reveal now uses broader overlapping rows, reducing repeated side-to-side passes while preserving complete coverage without gaps.",
+      "ar": "يستخدم الإظهار المتصل للصور غير الشفافة الآن صفوفًا أعرض ومتداخلة، لتقليل مرات الحركة من جانب إلى جانب مع الحفاظ على كشف الصورة كاملة من دون فراغات."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.21",
+   "buildNumber": 67,
+   "releaseDate": "2026-08-30",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Natural side-to-side image reveal",
+      "ar": "إظهار طبيعي للصورة من جانب إلى جانب"
+     },
+     "description": {
+      "en": "Opaque background images now use one continuous VideoScribe-style side sweep. The hand starts from the left edge instead of moving above the image and no longer disappears between reveal rows.",
+      "ar": "تستخدم الصور ذات الخلفية غير الشفافة الآن مسحًا جانبيًا متصلًا بأسلوب VideoScribe. تبدأ اليد من الحافة اليسرى بدل التحرك أعلى الصورة، ولا تختفي بين صفوف الإظهار."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.20",
+   "buildNumber": 66,
+   "releaseDate": "2026-08-30",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Safer animation choice for background images",
+      "ar": "اختيار آمن لتحريك الصور ذات الخلفية"
+     },
+     "description": {
+      "en": "HandDraw now recognizes colored, full-background images and steers them to Auto Reveal. Auto Path is dimmed but remains clickable for a clear explanation, while SVG, transparent artwork, and sparse line art keep their existing workflows.",
+      "ar": "يتعرف HandDraw الآن على الصور الملونة ذات الخلفية الكاملة ويوجهها إلى الإظهار التلقائي. يظهر زر المسارات التلقائية باهتًا مع بقائه قابلًا للضغط لشرح السبب، بينما تظل مسارات SVG والصور الشفافة والرسم الخطي كما هي."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.19",
+   "buildNumber": 65,
+   "releaseDate": "2026-08-30",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Faster app launch",
+      "ar": "تشغيل أسرع للتطبيق"
+     },
+     "description": {
+      "en": "The macOS splash now fades as soon as Flutter renders the editor instead of adding a fixed post-readiness pause, while still preventing an unpainted or black launch frame.",
+      "ar": "تختفي شاشة بدء macOS الآن فور انتهاء Flutter من رسم المحرر بدل إضافة انتظار ثابت بعد الجاهزية، مع الاستمرار في منع ظهور إطار أسود أو غير مرسوم عند التشغيل."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.18",
+   "buildNumber": 64,
+   "releaseDate": "2026-08-30",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Diagonal hand reveal for opaque images",
+      "ar": "إظهار قطري باليد للصور غير الشفافة"
+     },
+     "description": {
+      "en": "Auto Reveal now uncovers colored raster images with opaque backgrounds using overlapping diagonal hand sweeps. SVG and transparent-image animation paths remain unchanged.",
+      "ar": "يكشف الإظهار التلقائي الآن الصور النقطية الملونة ذات الخلفيات غير الشفافة بتمريرات يد قطرية متداخلة، مع بقاء مسارات SVG والصور الشفافة بدون تغيير."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.17",
+   "buildNumber": 63,
+   "releaseDate": "2026-08-30",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Visible Auto Path progress",
+      "ar": "تقدم واضح لتحليل المسارات"
+     },
+     "description": {
+      "en": "Auto Path and Auto Reveal now show the actual analysis stage, completion percentage, elapsed time, and an updating estimate of the time left while image regions and paths are processed.",
+      "ar": "يعرض تحليل المسارات والإظهار التلقائي الآن مرحلة العمل الفعلية ونسبة الإنجاز والوقت المنقضي وتقديرًا متجددًا للوقت المتبقي أثناء معالجة مناطق الصورة ومساراتها."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.16",
+   "buildNumber": 62,
+   "releaseDate": "2026-08-29",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Camera dialog preview now plays the real project frame",
+      "ar": "معاينة خصائص الكاميرا تشغّل الآن إطار المشروع الحقيقي"
+     },
+     "description": {
+      "en": "The camera-shot dialog now resolves and renders the same drawing, hand, and camera frame used by the main Viewer and MOV output. Playback and scrubbing remain inside the open dialog, and the final preview frame no longer jumps to the following camera shot.",
+      "ar": "تعرض نافذة خصائص لقطة الكاميرا الآن نفس إطار الرسم واليد والكاميرا المستخدم في الـViewer وتصدير MOV. ويظل التشغيل والتحريك داخل النافذة المفتوحة، ولا يقفز إطار النهاية إلى لقطة الكاميرا التالية."
+     }
+    },
+    {
+     "type": "fix",
+     "title": {
+      "en": "Camera clips can now expand from their left edge",
+      "ar": "يمكن الآن توسيع لقطة الكاميرا من حافتها اليسرى"
+     },
+     "description": {
+      "en": "Camera trim handles now provide a larger hit target, a horizontal resize cursor, and a primary-color hover glow. Dragging the left edge in either direction changes the shot start while preserving its end, with snapping, overlap protection, and one-step undo.",
+      "ar": "توفر مقابض قص الكاميرا الآن مساحة التقاط أكبر ومؤشر تغيير حجم أفقي وتوهجًا بلون المشروع عند الوقوف عليها. ويغيّر سحب الحافة اليسرى في أي اتجاه بداية اللقطة مع تثبيت نهايتها، ودعم المحاذاة ومنع التداخل والتراجع بخطوة واحدة."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Clear matching controls for collapsing the inspector",
+      "ar": "أسهم متطابقة وواضحة لطي لوحة الخصائص وفتحها"
+     },
+     "description": {
+      "en": "The inspector now uses a themed directional arrow instead of a close symbol, and the collapsed edge shows its matching reverse arrow so the panel always remains discoverable.",
+      "ar": "تستخدم لوحة الخصائص الآن سهمًا اتجاهيًا منسجمًا مع الثيم بدل علامة الإغلاق، وتعرض الحافة بعد الطي السهم العكسي المطابق حتى تظل طريقة فتح اللوحة واضحة دائمًا."
+     }
+    },
+    {
+     "type": "fix",
+     "title": {
+      "en": "Camera previews now stay inside shot properties",
+      "ar": "معاينة الكاميرا تبقى داخل خصائص اللقطة"
+     },
+     "description": {
+      "en": "Preview this shot now plays, pauses, and scrubs locally without closing the dialog or switching the main Viewer. The Link tab derives the covered artwork name from timeline timing and clearly labels shots that continue through the last scene.",
+      "ar": "تعمل «معاينة هذه اللقطة» الآن مع التشغيل والإيقاف المؤقت والتحريك داخل النافذة نفسها بدون إغلاقها أو الانتقال إلى الـViewer الرئيسي. ويستخرج تبويب الارتباط اسم مقطع الرسم المغطى من توقيت الخط الزمني، مع توضيح اللقطات الممتدة إلى آخر مشهد."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Independent camera shots and a canvas-first workspace",
+      "ar": "لقطات كاميرا مستقلة ومساحة عمل تضع الكانفز أولًا"
+     },
+     "description": {
+      "en": "Every camera block now exposes its own framed thumbnail, scene link, movement and hold timing, trim handles, and a five-part properties dialog with frame, timing, zoom, linking, and preview controls. Camera timing and zoom were moved out of the canvas toolbar. The workspace adds a collapsible inspector, a resizable compact timeline, and a reversible canvas-focus mode while preserving the selected video aspect ratio.",
+      "ar": "يعرض كل بلوك كاميرا الآن معاينته المؤطرة والمشهد المرتبط ومدة الحركة والتوقف ومقابض القص، مع نافذة خصائص من خمسة أقسام للإطار والتوقيت والتقريب والارتباط والمعاينة. وتم نقل توقيت الكاميرا والتقريب من شريط الكانفز، مع إضافة لوحة خصائص قابلة للطي وخط زمني مدمج قابل لتغيير الارتفاع ووضع تركيز قابل للعكس، مع الحفاظ على نسبة أبعاد الفيديو المحددة."
+     }
+    },
+    {
+     "type": "fix",
+     "title": {
+      "en": "The global playhead now scrubs the complete preview",
+      "ar": "مؤشر التشغيل العام يحرّك المعاينة الكاملة الآن"
+     },
+     "description": {
+      "en": "Primary-dragging the timeline ruler or the playhead now scrubs the shared project time and immediately refreshes artwork, camera, Viewer progress, and synchronized audio. Middle-drag still pans the timeline horizontally, while individual artwork and audio lane seeks remain independent.",
+      "ar": "يؤدي السحب الأساسي على مسطرة الخط الزمني أو مؤشر التشغيل الآن إلى تحريك زمن المشروع المشترك وتحديث الرسم والكاميرا وتقدم الـViewer والصوت المتزامن فورًا. ويظل السحب بالزر الأوسط مخصصًا لتحريك الخط الزمني أفقيًا، مع بقاء تحريك مساري الرسم والصوت المنفردين مستقلًا."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.11",
+   "buildNumber": 57,
+   "releaseDate": "2026-08-29",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Camera selection no longer looks like playback",
+      "ar": "تحديد الكاميرا لم يعد يبدو كأنه تشغيل"
+     },
+     "description": {
+      "en": "Selecting a camera or timeline frame now remains a clearly paused, seekable Viewer state with a Play button. Only the real master playback clock shows Pause and Stop, so pressing Play starts the video normally instead of invoking an invalid pause path.",
+      "ar": "يظل تحديد الكاميرا أو أي إطار من الخط الزمني الآن حالة عرض ثابتة وواضحة قابلة للتحريك مع زر تشغيل. ولا يظهر زرا الإيقاف المؤقت والإيقاف الكامل إلا عند عمل ساعة التشغيل الرئيسية فعليًا، لذلك يبدأ الضغط على تشغيل الفيديو بصورة طبيعية بدل استدعاء مسار إيقاف غير صالح."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.10",
+   "buildNumber": 56,
+   "releaseDate": "2026-08-29",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "A cleaner, focused main toolbar",
+      "ar": "شريط رئيسي أبسط وأكثر تركيزًا"
+     },
+     "description": {
+      "en": "The duplicate Draw Path and Reveal Text controls have been removed from the main toolbar. Select remains the focused editing tool, while automatic paths, automatic reveal, and the advanced manual tools menu preserve the complete workflow without visual repetition.",
+      "ar": "تمت إزالة زري رسم المسار وإظهار النص المكررين من الشريط الرئيسي، مع إبقاء التحديد كأداة التحرير الأساسية. وتظل المسارات التلقائية والإظهار التلقائي وقائمة الأدوات اليدوية المتقدمة متاحة بكامل وظائفها دون تكرار بصري."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.9",
+   "buildNumber": 55,
+   "releaseDate": "2026-08-29",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Timeline blocks now drive the Viewer",
+      "ar": "بلوكات الخط الزمني تتحكم الآن في العارض"
+     },
+     "description": {
+      "en": "Selecting an artwork or scene block now reveals its representative finished frame in the Viewer at the exact shared timeline position. Selecting a camera block restores its saved view, opens camera editing, and moves the playhead to that shot, keeping Preview and MOV timing aligned.",
+      "ar": "يعرض الضغط على بلوك صورة أو مشهد الآن لقطته المكتملة الممثلة داخل العارض عند موضعها الدقيق على الخط الزمني المشترك. كما يستعيد الضغط على بلوك الكاميرا منظرها المحفوظ ويفتح تحرير الكاميرا وينقل مؤشر التشغيل إلى اللقطة، مع الحفاظ على تطابق توقيت المعاينة وتصدير MOV."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.8",
+   "buildNumber": 54,
+   "releaseDate": "2026-08-29",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "A clearer waveform and full-size audio actions",
+      "ar": "موجة صوت أوضح وقائمة إجراءات كاملة الحجم"
+     },
+     "description": {
+      "en": "The audio waveform now uses normalized, full-height bars with distinct played and upcoming colors. Its action menu is comfortably sized with labeled icons, and Remove Audio is clearly exposed as an undoable destructive action.",
+      "ar": "تعرض موجة الصوت الآن أعمدة واضحة تملأ ارتفاع الكليب، مع لون مميز للجزء الذي تم تشغيله ولون أهدأ للجزء المتبقي. وأصبحت قائمة الإجراءات بحجم مريح مع أيقونات وعناوين واضحة، ويظهر حذف الصوت كإجراء تحذيري يمكن التراجع عنه."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.7",
+   "buildNumber": 53,
+   "releaseDate": "2026-08-29",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Camera frame and video output now match exactly",
+      "ar": "إطار الكاميرا ومشهد الفيديو متطابقان بدقة"
+     },
+     "description": {
+      "en": "Starting the master video preview now commits the currently visible camera frame before acquiring its render snapshot. The grid, camera border, Preview, and MOV export therefore use the same saved crop, even when the frame was just moved, resized, or zoomed.",
+      "ar": "يعتمد تشغيل معاينة الفيديو الآن إطار الكاميرا الظاهر حاليًا قبل إنشاء لقطة العرض. وبذلك تستخدم الشبكة وبوردر الكاميرا والمعاينة وتصدير MOV نفس القص المحفوظ، حتى لو تم تحريك الإطار أو تغيير حجمه أو تقريبه للتو."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.6",
+   "buildNumber": 52,
+   "releaseDate": "2026-08-29",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Video controls remain available while editing the camera",
+      "ar": "أزرار الفيديو تظل متاحة أثناء تحرير الكاميرا"
+     },
+     "description": {
+      "en": "The full video player now stays visible while composing a camera shot. Starting playback still switches to the clean camera-output preview automatically, hiding the grid, frame, handles, and editing dock until playback stops.",
+      "ar": "يظل مشغل الفيديو الكامل ظاهرًا الآن أثناء ضبط لقطة الكاميرا. وعند بدء التشغيل ينتقل الكانفاس تلقائيًا إلى معاينة مخرجات الكاميرا النظيفة، فتختفي الشبكة والإطار والمقابض وشريط التحرير حتى يتوقف التشغيل."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.5",
+   "buildNumber": 51,
+   "releaseDate": "2026-08-29",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Precise composition grids inside the camera frame",
+      "ar": "شبكات تقسيم دقيقة داخل إطار الكاميرا"
+     },
+     "description": {
+      "en": "Camera editing now starts with a precise 2×2 quarters grid and can switch to a 3×3 Rule of Thirds grid. The guide follows the exact camera frame while panning, resizing, and zooming, and remains editor-only so it never appears in Preview or MOV export.",
+      "ar": "يبدأ تحرير الكاميرا الآن بشبكة دقيقة 2×2 تقسم الإطار إلى أربعة أرباع، مع إمكانية التبديل إلى شبكة 3×3 وفق قاعدة الأثلاث. تتبع الشبكة حدود الكاميرا بدقة أثناء التحريك وتغيير الحجم والتقريب، وتظل دليلًا داخل المحرر فقط فلا تظهر في المعاينة أو تصدير MOV."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.4",
+   "buildNumber": 50,
+   "releaseDate": "2026-08-29",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Draw and pause timing visible inside every clip",
+      "ar": "توقيت الرسم والتوقف ظاهر داخل كل مقطع"
+     },
+     "description": {
+      "en": "Artwork and scene thumbnails now contain an amber outline for the exact draw or reveal interval. Enabled pauses before and after drawing appear as compact amber pause markers at their real positions, always clipped inside the block and derived from the shared Preview and MOV schedule.",
+      "ar": "تحتوي صور المقاطع والمشاهد الآن على إطار أصفر يحدد فترة الرسم أو الظهور الفعلية بدقة. وتظهر التوقفات المفعلة قبل الرسم وبعده كعلامات توقف صفراء صغيرة في مواضعها الحقيقية، داخل حدود البلوك دائمًا ومحسوبة من جدول المعاينة وتصدير MOV المشترك."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.3",
+   "buildNumber": 49,
+   "releaseDate": "2026-08-29",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "The real HandDraw logo in the video player",
+      "ar": "شعار HandDraw الحقيقي داخل مشغل الفيديو"
+     },
+     "description": {
+      "en": "The temporary path icon in the video controls has been replaced by the official HandDraw Studio brand asset. The player automatically uses the correct logo variant for light and dark themes while preserving compact layouts.",
+      "ar": "تم استبدال أيقونة المسار المؤقتة داخل أدوات الفيديو بأصل شعار HandDraw Studio الرسمي. يستخدم المشغل نسخة الشعار المناسبة تلقائيًا للوضع الفاتح أو الداكن مع الحفاظ على العرض المضغوط."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.2",
+   "buildNumber": 48,
+   "releaseDate": "2026-08-29",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Custom export dimensions with pixel validation",
+      "ar": "أبعاد تصدير مخصصة مع التحقق بالبكسل"
+     },
+     "description": {
+      "en": "Choosing the Custom export preset now reveals editable width and height fields with explicit pixel units. Values are validated before one deliberate apply action, then the shared project canvas and MOV output use the same saved dimensions.",
+      "ar": "يعرض اختيار إعداد التصدير «مخصص» الآن حقلي عرض وارتفاع قابلين للتعديل مع وحدة بكسل واضحة. يتم التحقق من القيم قبل تطبيقها مرة واحدة، ثم تستخدم لوحة المشروع وتصدير MOV الأبعاد المحفوظة نفسها."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.1",
+   "buildNumber": 47,
+   "releaseDate": "2026-08-29",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Camera creation returns to the main toolbar",
+      "ar": "إضافة الكاميرا تعود إلى الشريط الرئيسي"
+     },
+     "description": {
+      "en": "Mask editing tools no longer crowd the main toolbar. A clear primary Add Camera action now takes their place, stays visible but disabled without a scene or artwork, and creates a camera shot at the master playhead before opening its frame for direct adjustment.",
+      "ar": "لم تعد أدوات تعديل القناع تزاحم الإجراءات الرئيسية في الشريط العلوي. حل محلها زر أساسي واضح لإضافة الكاميرا، يظل ظاهرًا ومعطّلًا دون مشهد أو رسم، وينشئ لقطة عند مؤشر التشغيل الرئيسي ثم يفتح إطارها للتعديل المباشر."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.17.0",
+   "buildNumber": 46,
+   "releaseDate": "2026-08-29",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Independent track scrubbing, synchronized master playback",
+      "ar": "معاينة مستقلة للمسارات وتشغيل رئيسي متزامن"
+     },
+     "description": {
+      "en": "The video player is now the master clock for synchronized artwork and audio playback, including exact pause and resume. Scrubbing the artwork or Voice Guide lane previews only that lane, while moving the main video progress realigns both. The Voice Guide icon now persistently controls whether that track joins master playback.",
+      "ar": "أصبح مشغل الفيديو هو الساعة الرئيسية لتشغيل الصورة والصوت معًا، مع استكمال دقيق بعد الإيقاف المؤقت. تحريك مؤشر الصورة أو الدليل الصوتي يعاين ذلك المسار وحده، بينما يعيد تحريك تقدم الفيديو الرئيسي محاذاة الاثنين. وتتحكم أيقونة الدليل الصوتي الآن بصورة محفوظة في مشاركة المسار مع التشغيل الرئيسي."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.16.9",
+   "buildNumber": 45,
+   "releaseDate": "2026-08-29",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "One aligned media timeline",
+      "ar": "خط زمني موحّد للصورة والصوت"
+     },
+     "description": {
+      "en": "Artwork and Voice Guide clips now share one full-width time scale in stacked lanes. Their real start and end times align exactly, one playhead crosses every lane, and played regions use the project accent while audio playback and file actions remain directly on the audio clip.",
+      "ar": "تظهر مقاطع الصورة والدليل الصوتي الآن في مسارات متراصة على مقياس زمني واحد بعرض كامل. تتطابق بداياتها ونهاياتها الحقيقية بدقة، ويمر مؤشر تشغيل واحد عبر كل المسارات، وتتلوّن الأجزاء المشغلة بلون المشروع مع بقاء تشغيل الصوت وإجراءات الملف داخل كليب الصوت مباشرة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.16.8",
+   "buildNumber": 44,
+   "releaseDate": "2026-08-29",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Per-clip hand timing",
+      "ar": "توقيت احترافي لليد لكل مقطع"
+     },
+     "description": {
+      "en": "Each clip now has independent start and end pause toggles with millisecond precision, plus hand entrance and exit animations. Every phase is part of the same resolved timeline used by Preview, synchronized audio, and MOV export, so the complete video stays aligned after edits.",
+      "ar": "أصبح لكل مقطع تحكم مستقل في التوقف عند البداية والنهاية بدقة المللي ثانية، مع حركات دخول وخروج لليد. تدخل كل المراحل في نفس الخط الزمني المستخدم للمعاينة والصوت المتزامن وتصدير MOV، ليظل الفيديو الكامل مضبوطًا بعد أي تعديل."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.16.7",
+   "buildNumber": 43,
+   "releaseDate": "2026-08-29",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "A responsive, familiar canvas player",
+      "ar": "مشغل لوحة مألوف ومتجاوب"
+     },
+     "description": {
+      "en": "The canvas now preserves the selected video aspect ratio and adds a YouTube-style playback bar with clear red progress, current quality, localized controls, and live mute and volume controls that disable automatically when the project has no audio.",
+      "ar": "تحافظ اللوحة الآن على نسبة أبعاد الفيديو المختارة، مع شريط تشغيل مألوف بتقدم أحمر واضح، وجودة الفيديو الحالية، وتحكمات مترجمة، وكتم ومستوى صوت يعملان مباشرة ويتعطلان تلقائيًا عندما لا يحتوي المشروع على صوت."
+     }
+    },
+    {
+     "type": "fix",
+     "title": {
+      "en": "Short Voice Guides replay audibly",
+      "ar": "إعادة مسموعة للمقاطع الصوتية القصيرة"
+     },
+     "description": {
+      "en": "Replaying a Voice Guide after its audio has already ended now restarts the synchronized preview from the beginning instead of resuming from a silent point beyond the clip.",
+      "ar": "عند إعادة تشغيل دليل صوتي انتهى بالفعل، تبدأ المعاينة المتزامنة الآن من البداية بدل الاستكمال من موضع صامت بعد نهاية المقطع."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.16.6",
+   "buildNumber": 42,
+   "releaseDate": "2026-08-28",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Scene-owned camera clips",
+      "ar": "كاميرا متكاملة لكل مشهد"
+     },
+     "description": {
+      "en": "Each timeline scene can now create one aligned camera clip with Start, Focus, and End views, visible motion timing, scene-to-scene connection controls, and a raw-canvas camera frame shared by Preview and MOV export.",
+      "ar": "يمكن الآن لكل مشهد في الخط الزمني إنشاء كليب كاميرا واحد محاذٍ له، بمناظر البداية والتركيز والنهاية، وتوقيت حركة ظاهر، وتحكم في الاتصال بين المشاهد، وإطار تعديل فوق المحتوى الخام متطابق مع المعاينة وتصدير MOV."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "A clearer, context-aware editor",
+      "ar": "واجهة أوضح حسب سياق العمل"
+     },
+     "description": {
+      "en": "Preview, export, drawing tools, timing, hand adjustments, and synchronized writing sound now show a clear disabled state until their required content exists. Export options have their own focused section, while the useful next action remains available.",
+      "ar": "تظهر المعاينة والتصدير وأدوات الرسم والتوقيت وضبط اليد وصوت الكتابة المتزامن الآن بحالة معطلة واضحة حتى تتوفر العناصر المطلوبة. أصبحت إعدادات التصدير في قسم مستقل ومركز، مع بقاء الخطوة التالية المفيدة متاحة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.16.5",
+   "buildNumber": 41,
+   "releaseDate": "2026-08-27",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Pen tip aligned by default",
+      "ar": "معايرة افتراضية دقيقة لسن القلم"
+     },
+     "description": {
+      "en": "The bundled Technical Pen now starts at its measured nib apex for every new installation and project. Older projects that used the previous generic marker anchor are repaired automatically without changing deliberate custom-hand calibration.",
+      "ar": "يبدأ القلم التقني المدمج الآن بمعايرة رأس السن المقاسة بدقة لكل تثبيت ومشروع جديد. وتُصلح المشاريع القديمة التي استخدمت موضع الماركر العام تلقائيًا دون تغيير المعايرة المقصودة للأيدي المخصصة."
+     }
+    },
+    {
+     "type": "fix",
+     "title": {
+      "en": "Text and underline stay synchronized",
+      "ar": "تزامن الحروف وخط التسطير"
+     },
+     "description": {
+      "en": "Raster and SVG Auto Path keep nearby underlines separate from letter traces and preserve distinct parallel strokes. Every line now reaches its full source thickness during its own pen pass instead of completing only on the final frame, consistently in Preview and MOV export.",
+      "ar": "تفصل المسارات التلقائية في الصور وSVG خطوط التسطير القريبة عن مسارات الحروف وتحافظ على كل ضربة متوازية كخط مستقل. يصل كل خط الآن إلى سمكه الأصلي الكامل أثناء مرور القلم عليه بدلًا من اكتماله في الفريم الأخير فقط، بنفس النتيجة في المعاينة وتصدير MOV."
+     }
+    },
+    {
+     "type": "fix",
+     "title": {
+      "en": "Stable fractional timeline layout",
+      "ar": "ثبات تخطيط الخط الزمني"
+     },
+     "description": {
+      "en": "Timeline clips with fractional calculated widths now remain cleanly contained at every window size and speed, without edge overflow warnings or striped artifacts.",
+      "ar": "تظل مقاطع الخط الزمني ذات العروض الكسرية داخل مسارها بدقة عند كل مقاس نافذة وسرعة، بدون تحذيرات تجاوز أو شرائط عند الحافة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.16.4",
+   "buildNumber": 40,
+   "releaseDate": "2026-08-24",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Synchronized canvas and timeline selection",
+      "ar": "تحديد متزامن بين اللوحة والخط الزمني"
+     },
+     "description": {
+      "en": "Selecting artwork on the canvas now focuses the matching timeline clip and smoothly reveals it, while selecting a clip immediately highlights the same artwork on the canvas. Grouped sections scroll to their containing scene without duplicating selection state.",
+      "ar": "يؤدي تحديد رسم على اللوحة الآن إلى تحديد المقطع المطابق وكشفه بسلاسة داخل الخط الزمني، كما يحدد اختيار المقطع الرسم نفسه فورًا على اللوحة. تنتقل القطاعات المجمعة إلى المشهد الذي يحتويها دون تكرار حالة التحديد."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "One-step Auto Path",
+      "ar": "مسارات تلقائية بخطوة واحدة"
+     },
+     "description": {
+      "en": "Auto Path now applies its result immediately for vector and raster artwork. The inspector shows a clear read-only breakdown of sections, paths, drawing modes, text, artwork, and preserved native vectors without a redundant Apply step.",
+      "ar": "يطبق Auto Path النتيجة فورًا للرسومات المتجهة والصور النقطية. يعرض المفتش ملخصًا واضحًا للقطاعات والمسارات وأنماط الرسم والنصوص والرسومات والمتجهات الأصلية المحفوظة بدون خطوة تطبيق زائدة."
+     }
+    },
+    {
+     "type": "fix",
+     "title": {
+      "en": "Stroke-aware filled SVG drawing",
+      "ar": "رسم ذكي لأشكال SVG الممتلئة"
+     },
+     "description": {
+      "en": "Thin filled SVG marks such as brackets and bars now use an isolated high-resolution medial path, so the hand follows the visible artwork. Compact cards and badges retain their reliable directional reveal, while Preview and MOV export continue sharing the same vector geometry.",
+      "ar": "تستخدم علامات SVG الرفيعة الممتلئة مثل الأقواس والأشرطة الآن مسارًا وسطيًا عالي الدقة بعد عزل كل شكل، فتتبع اليد الرسم المرئي فعليًا. تحتفظ الكروت والشارات المدمجة بالكشف الاتجاهي الموثوق، وتستمر المعاينة وتصدير MOV في استخدام هندسة المتجهات نفسها."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Focused macOS application menu",
+      "ar": "قائمة تطبيق macOS مركزة"
+     },
+     "description": {
+      "en": "The application menu now contains only HandDraw Studio's About, What's New, and Licenses actions, without the generic Services and application-visibility items.",
+      "ar": "أصبحت قائمة التطبيق تعرض فقط حول التطبيق وما الجديد والتراخيص، بدون خدمات macOS العامة وعناصر إخفاء التطبيقات."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Mouse-first timeline navigation",
+      "ar": "تحريك الخط الزمني بالماوس"
+     },
+     "description": {
+      "en": "Drag the time ruler left or right to pan the timeline, use the mouse wheel while hovering the dock, and keep dragging clips for reordering without gesture conflicts.",
+      "ar": "يمكن الآن سحب مسطرة الوقت يمينًا ويسارًا لتحريك الخط الزمني، واستخدام عجلة الماوس أثناء الوقوف فوقه، مع استمرار سحب المقاطع لإعادة ترتيبها دون تعارض بين الحركات."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.16.0",
+   "buildNumber": 36,
+   "releaseDate": "2026-08-24",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Unified timeline section properties",
+      "ar": "خصائص موحدة لعناصر الخط الزمني"
+     },
+     "description": {
+      "en": "Timeline View is now the single section editor, with responsive Timing, Path, Appearance, and Mask tabs. Preview, direction, node editing, split/join, pause points, reveal mode, and mask controls moved out of the legacy Inspector stroke list without changing shared Preview or MOV behavior.",
+      "ar": "أصبح عرض عنصر الخط الزمني هو محرر الخصائص الموحد عبر تابات متجاوبة للتوقيت والمسار والظهور والماسك. انتقلت المعاينة والاتجاه وتحرير العقد والتقسيم والدمج ونقاط التوقف وطريقة الكشف وأدوات الماسك من قائمة المسارات القديمة في Inspector دون تغيير سلوك المعاينة أو تصدير MOV المشترك."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.15.2",
+   "buildNumber": 35,
+   "releaseDate": "2026-08-24",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Pen-tip accurate SVG reveal",
+      "ar": "كشف SVG متطابق مع سن القلم"
+     },
+     "description": {
+      "en": "Directional SVG reveals now stop exactly at the calibrated pen tip instead of exposing artwork ahead of the hand. Preview and MOV export share the corrected compositor in both left-to-right and right-to-left drawing directions.",
+      "ar": "يتوقف كشف SVG الاتجاهي الآن عند سن القلم المضبوط بدقة بدلًا من إظهار الرسم أمام اليد. تستخدم المعاينة وتصدير MOV المصحح نفسه في اتجاهي الرسم من اليسار إلى اليمين ومن اليمين إلى اليسار."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.15.1",
+   "buildNumber": 34,
+   "releaseDate": "2026-08-24",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Universal timeline selection and 12× zoom",
+      "ar": "تحديد شامل وتكبير حتى 12×"
+     },
+     "description": {
+      "en": "Every timeline clip now keeps an accessible selection control even at very narrow widths. Scenes support one-click tri-state selection for all members, and timeline zoom now ranges from 0.5× to 12× with precise buttons and a slider.",
+      "ar": "يحتفظ كل مقطع في الخط الزمني الآن بأداة تحديد واضحة حتى عند العرض الضيق جدًا. تدعم المشاهد تحديد كل عناصرها بضغطة واحدة مع حالة تحديد جزئية، ويمتد تكبير الخط الزمني الآن من 0.5× إلى 12× عبر أزرار دقيقة وشريط تمرير."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.15.0",
+   "buildNumber": 33,
+   "releaseDate": "2026-08-24",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Per-section timing controls",
+      "ar": "تحكم دقيق في توقيت كل مقطع"
+     },
+     "description": {
+      "en": "Selected timeline clips now expose View and Delete actions. View opens a visual timing editor for exact Animate, Pause, and Transition durations, all resolved by the same motion schedule used by the timeline, Preview, writing audio, and MOV export.",
+      "ar": "تعرض مقاطع الخط الزمني المحددة الآن إجراءات العرض والحذف. يفتح العرض محرر توقيت مرئيًا لضبط مدد الرسم والوقفة والانتقال بدقة، وتُحل جميعها من خلال جدول الحركة نفسه المستخدم في الخط الزمني والمعاينة وصوت الكتابة وتصدير MOV."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.14.1",
+   "buildNumber": 32,
+   "releaseDate": "2026-08-24",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Precise multi-clip timeline moves",
+      "ar": "نقل دقيق لمقاطع متعددة"
+     },
+     "description": {
+      "en": "Dragging now shows an exact before-or-after insertion line. Selected clips move together in their existing timeline order, with a count badge in the drag preview, while scenes remain atomic.",
+      "ar": "يعرض السحب الآن خط إدراج دقيق قبل المقطع أو بعده. تتحرك المقاطع المحددة معًا بنفس ترتيبها الحالي مع شارة توضح عددها أثناء السحب، وتظل المشاهد وحدة متماسكة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.14.0",
+   "buildNumber": 31,
+   "releaseDate": "2026-08-24",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Frame-accurate timeline timing",
+      "ar": "توقيت دقيق ومتزامن للخط الزمني"
+     },
+     "description": {
+      "en": "Timeline clips now use widths proportional to their real drawing duration, and the ruler, playhead, Preview, and MOV export share the same drawing clock. Speed edits also resynchronize paused previews, with precise drawing control down to 0.10x.",
+      "ar": "تعرض مقاطع الخط الزمني الآن عرضًا متناسبًا مع مدة الرسم الحقيقية، ويستخدم المسطرة ومؤشر التشغيل والمعاينة وتصدير MOV ساعة الرسم نفسها. كما تعيد تغييرات السرعة مزامنة المعاينة المتوقفة مؤقتًا، مع تحكم دقيق في سرعة الرسم حتى 0.10×."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.13.1",
+   "buildNumber": 30,
+   "releaseDate": "2026-08-24",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Direct timeline drag and drop",
+      "ar": "سحب وإفلات مباشر في الخط الزمني"
+     },
+     "description": {
+      "en": "Timeline clips and compound scenes now move immediately with a desktop mouse drag, show a live clip preview and drop highlight, and auto-scroll near horizontal edges for long timelines.",
+      "ar": "يمكن الآن نقل مقاطع الخط الزمني والمشاهد المركبة فورًا بالسحب بالماوس، مع معاينة حية وتمييز موضع الإفلات وتمرير تلقائي عند حواف الخطوط الزمنية الطويلة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.13.0",
+   "buildNumber": 29,
+   "releaseDate": "2026-08-24",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Timeline clip thumbnails",
+      "ar": "صور معاينة لمقاطع الخط الزمني"
+     },
+     "description": {
+      "en": "Every timeline section now shows a high-quality crop of its final artwork plus absolute start and end times. Applied clips use the exact Preview and MOV schedule, while pre-Apply clips show path-length-weighted estimates.",
+      "ar": "يعرض كل قسم في الخط الزمني الآن صورة دقيقة للجزء النهائي من الرسم مع وقت البداية والنهاية. تستخدم المقاطع المطبقة نفس توقيت المعاينة وتصدير MOV، بينما تعرض المقاطع قبل التطبيق تقديرًا موزونًا بطول المسارات."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.12.1",
+   "buildNumber": 28,
+   "releaseDate": "2026-08-24",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Stable empty-project inspector",
+      "ar": "استقرار لوحة المشروع الفارغ"
+     },
+     "description": {
+      "en": "The inspector now safely discards a stale stroke selection when a project has no strokes, preventing the RangeError screen during project transitions or startup.",
+      "ar": "تتجاهل لوحة الخصائص الآن أي تحديد قديم لمسار عندما لا يحتوي المشروع على مسارات، ما يمنع شاشة RangeError أثناء انتقالات المشروع أو بدء التشغيل."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.12.0",
+   "buildNumber": 27,
+   "releaseDate": "2026-08-24",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Professional bottom timeline",
+      "ar": "خط زمني احترافي أسفل الكانفاس"
+     },
+     "description": {
+      "en": "The Smart Timeline is now a horizontal dock beneath the canvas with a time ruler, playhead, zoom, scrollable clips, and compound scene clips inspired by professional editing workflows.",
+      "ar": "أصبح الخط الزمني الذكي شريطًا أفقيًا أسفل الكانفاس مع مسطرة زمنية ومؤشر تشغيل وتقريب وتمرير وClips للمشاهد المركبة بأسلوب برامج المونتاج الاحترافية."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Timeline remains editable after Apply",
+      "ar": "استمرار تحرير الخط الزمني بعد التطبيق"
+     },
+     "description": {
+      "en": "Before Apply, clips control Auto Path sections. After Apply, the same dock moves complete stroke blocks without splitting their geometry, keeping Preview and MOV export on the exact visible order.",
+      "ar": "قبل التطبيق تتحكم الـClips في أقسام Auto Path، وبعد التطبيق يحرك الشريط كتل المسارات كاملة دون تقسيم هندستها، مع إبقاء المعاينة وتصدير MOV على نفس الترتيب الظاهر."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.11.0",
+   "buildNumber": 26,
+   "releaseDate": "2026-08-24",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Unified Smart Timeline",
+      "ar": "الخط الزمني الذكي الموحد"
+     },
+     "description": {
+      "en": "Every Auto Path section now appears in a draggable timeline. Reorder individual items, group selected items into expandable scenes, move scenes atomically, and reorder their contents before applying paths.",
+      "ar": "يظهر كل قسم من Auto Path الآن داخل خط زمني قابل للسحب. يمكن ترتيب العناصر، وتجميع المحدد داخل مشاهد قابلة للفتح، وتحريك المشهد كوحدة واحدة، وترتيب محتوياته قبل تطبيق المسارات."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "One order for Preview and MOV",
+      "ar": "ترتيب واحد للمعاينة وMOV"
+     },
+     "description": {
+      "en": "Auto Arrange suggests semantic and travel-efficient order, while the final timeline order is persisted and converted into the exact stroke sequence consumed by both Preview and MOV export. Canvas enclosure remains optional for complex artwork.",
+      "ar": "يقترح الترتيب الذكي تسلسلاً دلاليًا يقلل حركة القلم، ثم يُحفظ ترتيب الخط الزمني ويتحول إلى نفس تسلسل المسارات المستخدم في المعاينة وتصدير MOV. ويظل التحديد بإطار على الكانفاس اختياريًا للرسومات المعقدة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.10.0",
+   "buildNumber": 25,
+   "releaseDate": "2026-08-24",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Smart Scene Planner",
+      "ar": "منظم المشاهد الذكي"
+     },
+     "description": {
+      "en": "After Auto Path, enclose related canvas sections into numbered scenes, reorder or remove them, and preview their priority before applying. Every scene remains atomic while the planner reduces pen travel between its section blocks and keeps connectors after local content.",
+      "ar": "بعد Auto Path، أحط الأقسام المرتبطة على الكانفاس داخل مشاهد مرقمة، ثم أعد ترتيبها أو احذفها وراجع أولويتها قبل التطبيق. يظل كل مشهد وحدة لا تتجزأ، مع تقليل حركة القلم بين أقسامه وتأخير خطوط الربط إلى ما بعد محتواه المحلي."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Persistent backward-compatible scene order",
+      "ar": "ترتيب مشاهد محفوظ ومتوافق"
+     },
+     "description": {
+      "en": "Scene membership is stored with project strokes and used by the shared Preview and MOV timeline. Projects created before Scene Planner continue to use the established automatic order unchanged.",
+      "ar": "تُحفظ عضوية المشاهد مع مسارات المشروع ويستخدمها خط الزمن المشترك للمعاينة وMOV. وتستمر المشروعات السابقة لمنظم المشاهد باستخدام ترتيبها التلقائي المعتاد دون تغيير."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.9.2",
+   "buildNumber": 24,
+   "releaseDate": "2026-08-24",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Progressive SVG object drawing",
+      "ar": "رسم تدريجي ذكي لعناصر SVG"
+     },
+     "description": {
+      "en": "Auto Path now completes local SVG objects before canvas-spanning decorations. Crossing global strokes reveal from an isolated source layer, preventing unrelated colors from appearing along their route in Preview and export.",
+      "ar": "يُكمل Auto Path الآن عناصر SVG المحلية قبل الخطوط الممتدة عبر اللوحة. وتُكشف الخطوط العالمية المتقاطعة من طبقة مصدر مستقلة، لمنع ظهور ألوان وعناصر بعيدة بطريقها في المعاينة والتصدير."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Readable path counts on canvas",
+      "ar": "عدد مسارات واضح على الكانفاس"
+     },
+     "description": {
+      "en": "Selected Auto Path sections show their exact path count on canvas while dense start markers are collision-filtered, keeping complex glyphs and illustrations readable without hiding their total.",
+      "ar": "تعرض أقسام Auto Path المحددة العدد الدقيق لمساراتها على الكانفاس، مع منع تداخل علامات البداية الكثيفة لتبقى الحروف والرسومات المعقدة واضحة دون إخفاء العدد الإجمالي."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.9.1",
+   "buildNumber": 23,
+   "releaseDate": "2026-08-23",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Hand-written SVG glyphs",
+      "ar": "كتابة حروف SVG باليد"
+     },
+     "description": {
+      "en": "The hand now follows centerlines extracted from the SVG renderer's exact transparent text layer instead of sliding across a synthetic baseline while letters appear. Existing raster, reveal-only, and legacy SVG projects retain their established fallback behavior.",
+      "ar": "تتبع اليد الآن الخطوط الوسطية المستخرجة من طبقة النص الشفافة الدقيقة لنفس محرك SVG بدل التحرك فوق خط أفقي مصطنع بينما تظهر الحروف. وتظل سيناريوهات الصور العادية والإظهار فقط ومشروعات SVG القديمة على سلوكها الآمن السابق."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.9.0",
+   "buildNumber": 22,
+   "releaseDate": "2026-08-23",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Predictable top-to-bottom drawing order",
+      "ar": "ترتيب رسم ثابت من أعلى لأسفل"
+     },
+     "description": {
+      "en": "Dependency diagrams now complete each visual row from left to right before moving downward. Causal SVG connectors are drawn atomically from parent to child before dependency labels, instead of being interrupted mid-edge. Auto Path displays only the selected section overlay.",
+      "ar": "تُكمل مخططات العلاقات الآن كل صف بصري من اليسار لليمين قبل الانتقال لأسفل. وتُرسم خطوط الربط السببية في SVG كاملة من الأب إلى الابن قبل وصف العلاقة، دون قطع الخط في منتصفه. كما يعرض Auto Path إطار القسم المحدد فقط."
+     }
+    },
+    {
+     "type": "fix",
+     "title": {
+      "en": "Pixel-isolated SVG reveal",
+      "ar": "رسم SVG بطبقات بكسل معزولة"
+     },
+     "description": {
+      "en": "Filled shapes and linework now reveal from separate exact SVG sources, preventing neighboring node colors from leaking into arrows. Canvas editing shows only the selected path plus a lightweight hover outline, with nearest-path selection directly on the artwork.",
+      "ar": "تُرسم الأشكال المملوءة والخطوط الآن من مصادر SVG دقيقة ومنفصلة، ما يمنع تسرب ألوان العقد المجاورة إلى الأسهم. ويعرض المحرر المسار المحدد فقط مع تحديد خفيف عند المرور واختيار أقرب مسار مباشرة من الرسم."
+     }
+    },
+    {
+     "type": "fix",
+     "title": {
+      "en": "Clean SVG layers and instant launch",
+      "ar": "طبقات SVG نظيفة وتشغيل فوري"
+     },
+     "description": {
+      "en": "SVG text now reveals from an exact source layer without rectangular fill seams, common arrow markers are expanded into renderable paths, and startup preferences and audio no longer delay the first Flutter frame or expose a black surface.",
+      "ar": "يظهر نص SVG الآن من طبقة مصدر دقيقة دون حواف مستطيلة، وتتحول علامات الأسهم الشائعة إلى مسارات قابلة للرسم، كما لم تعد إعدادات التشغيل والصوت تؤخر أول إطار Flutter أو تكشف شاشة سوداء."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Neutral artwork import",
+      "ar": "استيراد محايد للرسومات"
+     },
+     "description": {
+      "en": "SVG and raster artwork now import without adding animation automatically. Auto Path and Auto Reveal share one facade and select the precise native SVG or raster analysis strategy only after you choose an action.",
+      "ar": "تُستورد رسومات SVG والصور العادية الآن دون إضافة حركة تلقائيًا. يستخدم Auto Path وAuto Reveal واجهة موحدة تختار تحليل SVG الأصلي الدقيق أو تحليل الصور العادية فقط بعد اختيارك للأكشن."
+     }
+    },
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Production path editing",
+      "ar": "تحرير احترافي للمسارات"
+     },
+     "description": {
+      "en": "Edit multiple anchors, quadratic and cubic handles, smooth or corner nodes, split and join paths, choose a new start, hide paths, snap precisely, and undo each drag atomically.",
+      "ar": "عدّل عدة نقاط ومقابض Quadratic وCubic، وحوّل النقاط بين ناعمة وزاوية، وقسّم وادمج المسارات وحدد بداية جديدة وأخفِ المسارات واستخدم المحاذاة الدقيقة، مع تراجع ذري لكل سحبة."
+     }
+    },
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Final Cut delivery presets",
+      "ar": "إعدادات جاهزة لـFinal Cut"
+     },
+     "description": {
+      "en": "Export course, 4K overlay, vertical, square, and presentation presets with full or proxy rendering, selectable alpha interpretation, Rec.709 metadata, and post-export MOV contract verification.",
+      "ar": "صدّر إعدادات الدورات وطبقات 4K والفيديو الرأسي والمربع والعروض، بجودة كاملة أو Proxy، مع اختيار تفسير الشفافية وبيانات Rec.709 وفحص ملف MOV بعد التصدير."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Measured automatic-path quality",
+      "ar": "جودة مسارات تلقائية قابلة للقياس"
+     },
+     "description": {
+      "en": "Raster analysis now runs off the UI thread, refines source-resolution regions, plans graph branches deterministically, fits editable Bezier curves, validates mask coverage, and is protected by checked-in quality benchmarks and Preview/export pixel parity tests.",
+      "ar": "يعمل تحليل الصور خارج واجهة المستخدم، ويحسن المناطق من الدقة الأصلية ويرتب فروع الرسم البياني بحتمية ويحوّلها لمنحنيات Bezier قابلة للتحرير ويفحص تغطية القناع، مع Benchmarks ثابتة واختبار تطابق بكسلات المعاينة والتصدير."
+     }
+    },
+    {
+     "type": "fix",
+     "title": {
+      "en": "Solid SVG fills during text sequencing",
+      "ar": "تعبئة SVG متصلة أثناء ترتيب النص"
+     },
+     "description": {
+      "en": "Filled SVG cards now preserve their original color behind deferred labels instead of showing rectangular holes or U-shaped reveals.",
+      "ar": "تحافظ عناصر SVG المملوءة الآن على لونها الأصلي خلف النص المؤجل بدل ظهور فتحات مستطيلة أو رسم على شكل U."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.8.0",
+   "buildNumber": 17,
+   "releaseDate": "2026-08-23",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Editable SVG artwork",
+      "ar": "رسومات SVG قابلة للتحرير"
+     },
+     "description": {
+      "en": "Import native SVG paths, preserve lines and Bezier curves, and refine anchors and control handles directly on the canvas.",
+      "ar": "استورد مسارات SVG الأصلية مع الحفاظ على الخطوط ومنحنيات Bezier، وعدّل نقاط الارتكاز ومقابض التحكم مباشرة على اللوحة."
+     }
+    },
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Non-destructive reveal masks",
+      "ar": "أقنعة إظهار غير مدمرة"
+     },
+     "description": {
+      "en": "Add or erase local reveal coverage per path while Preview and ProRes export share the exact same compositor.",
+      "ar": "أضف أو امسح مناطق الإظهار لكل مسار دون إتلاف الأصل، مع استخدام نفس محرك التركيب في المعاينة وتصدير ProRes."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Higher-detail automatic paths",
+      "ar": "مسارات تلقائية أعلى دقة"
+     },
+     "description": {
+      "en": "Multi-resolution raster analysis now preserves one-pixel 4K connectors, and deterministic graph planning reduces unnecessary pen travel across branches.",
+      "ar": "يحافظ التحليل متعدد الدقات الآن على الوصلات بعرض بكسل واحد في 4K، ويقلل تخطيط الرسم البياني الحتمي حركة القلم غير الضرورية بين الفروع."
+     }
+    },
+    {
+     "type": "fix",
+     "title": {
+      "en": "Pixel-accurate SVG animation",
+      "ar": "رسم SVG مطابق ودقيق"
+     },
+     "description": {
+      "en": "SVG animation now follows native curves and text coordinates, ignores definition-only paths, preserves rounded corners, and uses element-scoped reveals that keep labels hidden until their own pass while preserving branch order and atomic undo or redo.",
+      "ar": "يتبع رسم SVG الآن المنحنيات وإحداثيات النص الأصلية، ويتجاهل مسارات التعريف غير المرئية، ويحافظ على الزوايا الدائرية، ويقصر إظهار كل عنصر على حدوده حتى لا يظهر النص قبل دوره، مع الحفاظ على ترتيب الفروع والتراجع أو الإعادة كعملية واحدة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.7.0",
+   "buildNumber": 16,
+   "releaseDate": "2026-08-21",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "A gentle branded opening",
+      "ar": "افتتاحية صوتية هادئة"
+     },
+     "description": {
+      "en": "The branded splash now opens with a softly faded audio cue. It never delays the editor, stops gracefully on the first interaction, and can be disabled from the Audio inspector.",
+      "ar": "تبدأ شاشة الهوية الآن بصوت افتتاحي هادئ ومتدرج، دون تأخير المحرر، ويتوقف بسلاسة عند أول تفاعل ويمكن تعطيله من قسم الصوت."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.6.0",
+   "buildNumber": 15,
+   "releaseDate": "2026-08-21",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Precise pauses inside a path",
+      "ar": "وقفات دقيقة داخل المسار"
+     },
+     "description": {
+      "en": "Add a timed pause at any visual point on a path, optionally keep the hand in place, and preserve exact timing across Preview, writing sound, ProRes export, speed changes, direction reversal, saving, and undo or redo.",
+      "ar": "أضف وقفة بزمن محدد عند أي نقطة مرئية على المسار، مع إمكانية إبقاء اليد مكانها والحفاظ على التوقيت نفسه في المعاينة وصوت الكتابة وتصدير ProRes وتغيير السرعة وعكس الاتجاه والحفظ والتراجع أو الإعادة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.5.0",
+   "buildNumber": 14,
+   "releaseDate": "2026-08-21",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Focused path workflow",
+      "ar": "تجربة احترافية للتركيز على المسار"
+     },
+     "description": {
+      "en": "Selecting a path now highlights its exact canvas location, supports isolated preview, drag-and-drop ordering, explicit hand or reveal appearance, direction badges, precise ordering actions, and safer destructive controls.",
+      "ar": "يحدد اختيار المسار الآن مكانه بدقة على اللوحة، مع معاينة منفردة وسحب لإعادة الترتيب واختيار واضح للرسم باليد أو الإظهار وشارات للاتجاه وأوامر ترتيب دقيقة وحذف أكثر أمانًا."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.4.3",
+   "buildNumber": 13,
+   "releaseDate": "2026-08-21",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Reliable native file selection",
+      "ar": "اختيار موثوق للملفات"
+     },
+     "description": {
+      "en": "Drawing import now activates the macOS file panel before interaction and prevents overlapping import requests, so the first click reliably selects the intended file.",
+      "ar": "يُفعّل استيراد الرسم الآن نافذة اختيار ملفات macOS قبل التفاعل ويمنع طلبات الاستيراد المتداخلة، لتحدد الضغطة الأولى الملف المقصود بصورة موثوقة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.4.2",
+   "releaseDate": "2026-08-21",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Preview-safe canvas replacement",
+      "ar": "استبدال آمن للوحة بعد المعاينة"
+     },
+     "description": {
+      "en": "Completing Preview can no longer leave a stale final-frame mask over artwork imported after undoing paths and clearing the canvas.",
+      "ar": "لم يعد اكتمال المعاينة يترك قناعًا قديمًا للإطار الأخير فوق صورة يتم استيرادها بعد التراجع عن المسارات ومسح اللوحة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.4.1",
+   "releaseDate": "2026-08-21",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Reliable canvas re-import",
+      "ar": "إعادة استيراد موثوقة للوحة"
+     },
+     "description": {
+      "en": "A drawing imported after undoing paths and clearing the canvas now starts a fresh render session, and older Auto Path work can no longer affect the replacement artwork.",
+      "ar": "تبدأ الصورة المستوردة بعد التراجع عن المسارات ومسح اللوحة جلسة رسم جديدة، ولا يمكن لتحليل مسارات قديم التأثير على الرسم البديل."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.4.0",
+   "releaseDate": "2026-08-21",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Professional motion timing",
+      "ar": "توقيت حركة احترافي"
+     },
+     "description": {
+      "en": "Drawing speed and pen-lift travel now have independent controls, with fixed holds and section pauses preserved exactly.",
+      "ar": "أصبحت سرعة الرسم وسرعة انتقال القلم منفصلتين، مع الحفاظ بدقة على التثبيت ووقفات الأقسام."
+     }
+    },
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Fit to duration",
+      "ar": "ملاءمة مع مدة محددة"
+     },
+     "description": {
+      "en": "Set an exact output duration in one step. HandDraw Studio safely solves drawing speed without silently changing travel, cues, pauses, or holds.",
+      "ar": "حدد مدة الناتج بدقة في خطوة واحدة، وسيحسب التطبيق سرعة الرسم دون تغيير الانتقالات أو العلامات أو الوقفات أو التثبيت تلقائيًا."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.3.0",
+   "releaseDate": "2026-08-21",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Independent drawing speed",
+      "ar": "سرعة رسم مستقلة"
+     },
+     "description": {
+      "en": "A professional global speed control now changes hand drawing and natural pen travel without stretching the start delay, section pauses, or final hold.",
+      "ar": "يتحكم إعداد احترافي جديد في سرعة رسم اليد وانتقال القلم الطبيعي دون تمديد انتظار البداية أو وقفات الأقسام أو تثبيت النهاية."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Calculated output timing",
+      "ar": "توقيت ناتج محسوب بوضوح"
+     },
+     "description": {
+      "en": "The inspector shows drawing time and calculated output duration separately, while Preview, writing sound, and ProRes export share the same timing engine.",
+      "ar": "تعرض لوحة الخصائص مدة الرسم ومدة الناتج المحسوبة بصورة منفصلة، مع استخدام المعاينة وصوت الكتابة وتصدير ProRes لمحرك التوقيت نفسه."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.2.5",
+   "releaseDate": "2026-08-21",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Complete Auto Path handoff",
+      "ar": "انتقال مكتمل بعد اكتشاف المسارات"
+     },
+     "description": {
+      "en": "The Animation inspector now opens whether a section is selected by Auto Path analysis or directly on the canvas, while selecting the same section again remains a reliable shortcut back to its controls.",
+      "ar": "يفتح تبويب الحركة الآن سواء تم تحديد القسم تلقائيًا بعد تحليل المسارات أو يدويًا من اللوحة، كما تظل إعادة اختيار القسم نفسه اختصارًا موثوقًا للعودة إلى عناصر التحكم الخاصة به."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.2.4",
+   "releaseDate": "2026-08-21",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Guided Auto Path workflow",
+      "ar": "توجيه تلقائي بعد اختيار المسار"
+     },
+     "description": {
+      "en": "Selecting an Auto Path section now opens the Animation inspector immediately, keeping path choices and Apply Paths in the expected next step on docked and compact layouts.",
+      "ar": "ينتقل التطبيق الآن مباشرة إلى تبويب الحركة بعد اختيار أي قسم من المسارات التلقائية، لتظهر خيارات الحركة وزر تطبيق المسارات كخطوة تالية واضحة في التخطيطات المثبتة والمدمجة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.2.3",
+   "releaseDate": "2026-08-20",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Reliable canvas replacement",
+      "ar": "استبدال موثوق لمحتوى اللوحة"
+     },
+     "description": {
+      "en": "Importing a new drawing after Clear, Undo, or Redo now commits the image and its clean animation state atomically, while stale imports and history can no longer overwrite the canvas.",
+      "ar": "يتم الآن تثبيت الرسم الجديد وحالة حركته النظيفة كوحدة واحدة بعد المسح أو التراجع أو الإعادة، ولا تستطيع عمليات الاستيراد أو السجل القديم الكتابة فوق اللوحة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.2.2",
+   "releaseDate": "2026-08-20",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Branded path markers",
+      "ar": "علامات مسار بهوية التطبيق"
+     },
+     "description": {
+      "en": "Path starts and inspector rows now share crisp golden motion nodes inspired by the HandDraw logo, with adaptive numbering, selected-row emphasis, and dedicated light and dark colors.",
+      "ar": "تستخدم بدايات المسارات وصفوف لوحة الخصائص الآن نقاط حركة ذهبية موحدة مستوحاة من شعار HandDraw، مع أرقام متكيفة وإبراز للصف المحدد وألوان مخصصة للثيمين."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.2.1",
+   "releaseDate": "2026-08-20",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "fix",
+     "title": {
+      "en": "Clean canvas corners",
+      "ar": "حواف Canvas نظيفة"
+     },
+     "description": {
+      "en": "Imported artwork now stays inside one anti-aliased rounded viewport without square guides cutting through its corners.",
+      "ar": "تظل الرسومات المستوردة الآن داخل إطار دائري واحد ناعم دون أن تقطع الخطوط المستطيلة حواف الـCanvas."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Reusable canvas architecture",
+      "ar": "معمارية Canvas قابلة لإعادة الاستخدام"
+     },
+     "description": {
+      "en": "Canvas framing and contain geometry are shared, testable components while painting consumes immutable Cubit state for predictable updates.",
+      "ar": "أصبح إطار الـCanvas وحساب احتواء الصور مكونات مشتركة قابلة للاختبار، بينما يعتمد الرسم على حالة Cubit ثابتة لتحديثات متوقعة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.2.0",
+   "releaseDate": "2026-08-20",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "A native macOS menu",
+      "ar": "قائمة أصلية لنظام macOS"
+     },
+     "description": {
+      "en": "File, editing, animation, appearance, language, window, and help commands are now available from the macOS menu bar with familiar keyboard shortcuts.",
+      "ar": "أصبحت أوامر الملفات والتحرير والحركة والمظهر واللغة والنوافذ والمساعدة متاحة من شريط قوائم macOS مع اختصارات لوحة المفاتيح المعتادة."
+     }
+    },
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Export completion popover",
+      "ar": "نافذة احترافية لاكتمال التصدير"
+     },
+     "description": {
+      "en": "Follow rendering progress, cancel safely, retry errors, then reveal, open, or copy the path of the finished ProRes movie without losing your work.",
+      "ar": "تابع تقدم الرندر وألغِه بأمان أو أعد المحاولة عند الخطأ، ثم أظهر ملف ProRes النهائي أو افتحه أو انسخ مساره دون فقد العمل."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.1.0",
+   "releaseDate": "2026-08-20",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Premium inspector organization",
+      "ar": "تنظيم احترافي للوحة الخصائص"
+     },
+     "description": {
+      "en": "Project, timing, hand, audio, voice, animation, and path controls now use consistent section cards with clearer visual hierarchy.",
+      "ar": "أصبحت إعدادات المشروع والتوقيت واليد والصوت والتعليق والحركة والمسارات داخل بطاقات أقسام موحدة بتسلسل بصري أوضح."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "A typography made for drawing",
+      "ar": "خط مناسب لهوية الرسم"
+     },
+     "description": {
+      "en": "Playpen Sans Arabic now gives Arabic and English a unified hand-drawn character while remaining readable across the workspace.",
+      "ar": "يوحّد خط Playpen Sans Arabic مظهر العربية والإنجليزية بطابع قريب من الرسم اليدوي مع الحفاظ على وضوح مساحة العمل."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Stronger product branding",
+      "ar": "هوية بصرية أوضح"
+     },
+     "description": {
+      "en": "Larger responsive logos, coordinated light and dark artwork, and a polished About presentation make the product identity easier to recognize.",
+      "ar": "شعارات أكبر ومتجاوبة مع نسخ منسقة للثيمين وعرض مصقول في صفحة حول تجعل هوية التطبيق أوضح."
+     }
+    },
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "About and release history",
+      "ar": "صفحة حول وسجل الإصدارات"
+     },
+     "description": {
+      "en": "View product information, system details, legal credits, and a bilingual history of every release from inside the app.",
+      "ar": "اعرض معلومات التطبيق والنظام والتراخيص وسجلًا ثنائي اللغة لجميع الإصدارات من داخل البرنامج."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Responsive polish across the workspace",
+      "ar": "تحسينات متجاوبة في مساحة العمل"
+     },
+     "description": {
+      "en": "Toolbar, dialogs, inspector sections, and navigation stay balanced in Arabic RTL, English LTR, light, dark, and narrow layouts.",
+      "ar": "تحافظ أشرطة الأدوات والنوافذ وأقسام الخصائص والتنقل على توازنها في العربية RTL والإنجليزية والثيمين والمقاسات الضيقة."
+     }
+    }
+   ]
+  },
+  {
+   "version": "1.0.0",
+   "releaseDate": "2026-08-20",
+   "isCurrent": false,
+   "entries": [
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Smart paths and reveals",
+      "ar": "المسارات والإظهار الذكي"
+     },
+     "description": {
+      "en": "Detect text and artwork, then animate each section with a hand or a clean reveal.",
+      "ar": "اكتشف النصوص والرسومات، ثم حرّك كل قسم باليد أو بإظهار نظيف."
+     }
+    },
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Voice Guide Sync",
+      "ar": "مزامنة دليل الصوت"
+     },
+     "description": {
+      "en": "Use a waveform and section cues to align the drawing with your narration.",
+      "ar": "استخدم الموجة الصوتية وعلامات الأقسام لمزامنة الرسم مع التعليق الصوتي."
+     }
+    },
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Calibrated hand library",
+      "ar": "مكتبة أيدٍ بمعايرة دقيقة"
+     },
+     "description": {
+      "en": "Choose from built-in hands with independent pen-tip calibration, size, and direction.",
+      "ar": "اختر من أيدٍ مدمجة، ولكل يد معايرة مستقلة لسن القلم والحجم والاتجاه."
+     }
+    },
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Synchronized writing sounds",
+      "ar": "أصوات كتابة متزامنة"
+     },
+     "description": {
+      "en": "Preview and export realistic writing sounds that stop naturally during pauses.",
+      "ar": "عاين وصدّر أصوات كتابة واقعية تتوقف طبيعيًا أثناء الوقفات."
+     }
+    },
+    {
+     "type": "newFeature",
+     "title": {
+      "en": "Final Cut Pro-ready export",
+      "ar": "تصدير جاهز لـ Final Cut Pro"
+     },
+     "description": {
+      "en": "Export transparent 1920×1080, 30 fps Apple ProRes 4444 movies.",
+      "ar": "صدّر ملفات Apple ProRes 4444 شفافة بدقة 1920×1080 ومعدل 30 إطارًا/ث."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Professional responsive workspace",
+      "ar": "مساحة عمل احترافية ومتجاوبة"
+     },
+     "description": {
+      "en": "A responsive inspector and toolbar with complete Arabic RTL, English LTR, light, and dark support.",
+      "ar": "لوحة خصائص وشريط أدوات متجاوبان مع دعم كامل للعربية RTL والإنجليزية LTR والثيمين."
+     }
+    },
+    {
+     "type": "improvement",
+     "title": {
+      "en": "Advanced section timing",
+      "ar": "توقيت متقدم للأقسام"
+     },
+     "description": {
+      "en": "Control pauses, drawing speed, hand visibility, and absolute voice cues per section.",
+      "ar": "تحكم في الوقفات وسرعة الرسم وظهور اليد والعلامات الصوتية لكل قسم."
+     }
+    },
+    {
+     "type": "fix",
+     "title": {
+      "en": "Consistent preview and export",
+      "ar": "تطابق المعاينة والتصدير"
+     },
+     "description": {
+      "en": "Preview and exported MOV share the same orientation, timing, reveal, hand, and audio calculations.",
+      "ar": "تستخدم المعاينة وملف MOV نفس حسابات الاتجاه والتوقيت والإظهار واليد والصوت."
+     }
+    }
+   ]
+  }
+ ]
+}

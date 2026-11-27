@@ -1,0 +1,102 @@
+{
+  "dependencyKey": "-58c52a7ca3e393ab",
+  "status": "completedWithWarnings",
+  "shots": [
+    {
+      "planId": "plan-0-stroke:before-0",
+      "targets": [
+        "stroke:before"
+      ],
+      "intervalUs": [
+        0,
+        1000000
+      ],
+      "keyframes": [
+        {
+          "offsetUs": 0,
+          "view": [
+            0.2,
+            0.3,
+            0.126984126984127
+          ],
+          "transition": "cut",
+          "durationUs": 0
+        }
+      ],
+      "reasons": [
+        "contextualView",
+        "cutNoLeadTime"
+      ],
+      "score": {
+        "readability": 2.0,
+        "context": 1.2,
+        "motion": 2.6394236939231286,
+        "occlusion": 0.0,
+        "reversal": 0.0,
+        "cut": 0.6,
+        "frequency": 0.0,
+        "constraint": 0.0
+      }
+    },
+    {
+      "planId": "plan-2000000-stroke:after-2",
+      "targets": [
+        "stroke:after"
+      ],
+      "intervalUs": [
+        2000000,
+        3000000
+      ],
+      "keyframes": [
+        {
+          "offsetUs": 0,
+          "view": [
+            0.8,
+            0.3,
+            0.126984126984127
+          ],
+          "transition": "cut",
+          "durationUs": 0
+        }
+      ],
+      "reasons": [
+        "contextualView",
+        "largeJumpCut"
+      ],
+      "score": {
+        "readability": 2.0,
+        "context": 1.2,
+        "motion": 5.859375000000001,
+        "occlusion": 0.0,
+        "reversal": 0.8,
+        "cut": 0.0,
+        "frequency": 0.0,
+        "constraint": 0.0
+      }
+    }
+  ],
+  "preserved": [
+    "manual",
+    "locked"
+  ],
+  "removedAuto": [],
+  "diagnostics": [
+    "unknown_hand_footprint",
+    "pan_speed_budget",
+    "zoom_speed_budget"
+  ],
+  "warnings": [
+    "uncovered_protected_interval"
+  ],
+  "metrics": {
+    "shots": 2,
+    "moves": 0,
+    "cuts": 2,
+    "fades": 0,
+    "averageHoldUs": 1000000,
+    "reversals": 0,
+    "uncovered": 1,
+    "readabilityWarnings": 0,
+    "occlusionWarnings": 0
+  }
+}

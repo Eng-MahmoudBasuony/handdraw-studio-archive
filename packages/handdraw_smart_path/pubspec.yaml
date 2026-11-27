@@ -1,0 +1,19 @@
+name: handdraw_smart_path
+description: Cross-platform text and artwork path analysis for HandDraw Studio.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.12.2
+  flutter: '>=3.38.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      macos:
+        pluginClass: HandDrawSmartPathPlugin
+

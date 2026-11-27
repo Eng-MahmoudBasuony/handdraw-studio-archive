@@ -1,0 +1,35 @@
+name: HandDraw quality
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  flutter-quality:
+    runs-on: macos-14
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: '3.47.9'
+          cache: true
+      - run: flutter pub get
+      - run: dart pub get
+        working-directory: benchmark/project_container
+      - run: flutter analyze
+      - run: flutter test
+      - run: dart run tool/path_benchmark.dart --output build/path_benchmark_report.json
+      # Explicit offline targets: never launch account-backed live AI tests.
+      - run: flutter test integration_test/codex_apply_plan_test.dart -d macos
+      - run: flutter test integration_test/scene_composer_test.dart -d macos
+      - run: flutter build macos --release
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: path-benchmark-report
+          path: |
+            build/path_benchmark_report.json
+            build/path_benchmark_comparisons/

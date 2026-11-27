@@ -1,0 +1,85 @@
+name: Project container qualification
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - benchmark/project_container/**
+      - lib/features/editor/application/project_document_container_service.dart
+      - lib/features/project/application/container/**
+      - lib/features/project/infrastructure/container/**
+      - test/atomic_file_replacer_test.dart
+      - test/project_container_consistency_test.dart
+      - test/project_container_dependency_boundary_test.dart
+      - test/project_container_store_test.dart
+      - test/raw_zip_entry_scanner_test.dart
+      - pubspec.yaml
+      - pubspec.lock
+      - .github/workflows/project-container-qualification.yml
+
+permissions:
+  contents: read
+
+jobs:
+  portable-container-contract:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: benchmark/project_container
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+      - run: dart pub get
+      - run: dart analyze
+      - run: dart test --exclude-tags large
+
+  zip64-entry-count:
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: benchmark/project_container
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+      - run: dart pub get
+      - run: dart test test/zip64_qualification_test.dart
+
+  production-container-contract:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: flutter analyze
+      - run: >-
+          flutter test
+          test/atomic_file_replacer_test.dart
+          test/project_container_consistency_test.dart
+          test/project_container_dependency_boundary_test.dart
+          test/project_container_store_test.dart
+          test/raw_zip_entry_scanner_test.dart
+
+  windows-production-blocker:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: >-
+          flutter test
+          test/atomic_file_replacer_test.dart
+          test/raw_zip_entry_scanner_test.dart

@@ -1,0 +1,63 @@
+{
+  "dependencyKey": "-52023313eb2f6815",
+  "status": "completed",
+  "shots": [
+    {
+      "planId": "plan-0-stroke:near-1+stroke:near-2+stroke:near-3-0",
+      "targets": [
+        "stroke:near-1",
+        "stroke:near-2",
+        "stroke:near-3"
+      ],
+      "intervalUs": [
+        0,
+        1800000
+      ],
+      "keyframes": [
+        {
+          "offsetUs": 0,
+          "view": [
+            0.475,
+            0.465,
+            0.20317460317460317
+          ],
+          "transition": "cut",
+          "durationUs": 0
+        }
+      ],
+      "reasons": [
+        "contextualView",
+        "cutNoLeadTime"
+      ],
+      "score": {
+        "readability": 2.0,
+        "context": 1.2,
+        "motion": 1.7289896158916478,
+        "occlusion": 0.0,
+        "reversal": 0.0,
+        "cut": 0.6,
+        "frequency": 0.0,
+        "constraint": 0.0
+      }
+    }
+  ],
+  "preserved": [],
+  "removedAuto": [],
+  "diagnostics": [
+    "unknown_hand_footprint",
+    "pan_speed_budget",
+    "zoom_speed_budget"
+  ],
+  "warnings": [],
+  "metrics": {
+    "shots": 1,
+    "moves": 0,
+    "cuts": 1,
+    "fades": 0,
+    "averageHoldUs": 1800000,
+    "reversals": 0,
+    "uncovered": 0,
+    "readabilityWarnings": 0,
+    "occlusionWarnings": 0
+  }
+}

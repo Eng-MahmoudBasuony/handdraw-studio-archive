@@ -1,0 +1,1 @@
+enum ArtworkSourceKind { raster, svg }

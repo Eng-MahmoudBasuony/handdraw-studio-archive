@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "cases": {
+    "thin_lines": {
+      "minimumCoverage": 0.98,
+      "maximumLeakage": 0.002,
+      "maximumCenterlineError": 0.005,
+      "maximumTravelRatio": 0.80,
+      "maximumPenLiftCount": 2,
+      "maximumDuplicateCoverage": 0.01,
+      "minimumBranchOrderScore": 0.95,
+      "maximumAnalysisMilliseconds": 5000,
+      "maximumPeakMemoryBytes": 268435456
+    },
+    "flowchart_branches": {
+      "minimumCoverage": 0.98,
+      "maximumLeakage": 0.003,
+      "maximumCenterlineError": 0.008,
+      "maximumTravelRatio": 0.35,
+      "maximumPenLiftCount": 3,
+      "maximumDuplicateCoverage": 0.05,
+      "minimumBranchOrderScore": 0.95,
+      "maximumAnalysisMilliseconds": 5000,
+      "maximumPeakMemoryBytes": 268435456
+    },
+    "transparent_colored_art": {
+      "minimumCoverage": 0.98,
+      "maximumLeakage": 0.003,
+      "maximumCenterlineError": 0.01,
+      "maximumTravelRatio": 0.25,
+      "maximumPenLiftCount": 1,
+      "maximumDuplicateCoverage": 0.12,
+      "minimumBranchOrderScore": 0.95,
+      "maximumAnalysisMilliseconds": 5000,
+      "maximumPeakMemoryBytes": 268435456
+    }
+  }
+}

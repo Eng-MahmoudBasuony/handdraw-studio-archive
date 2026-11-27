@@ -1,0 +1,61 @@
+{
+  "dependencyKey": "7b97916c55aff165",
+  "status": "completed",
+  "shots": [
+    {
+      "planId": "plan-0-stroke:instant-0",
+      "targets": [
+        "stroke:instant"
+      ],
+      "intervalUs": [
+        0,
+        1000000
+      ],
+      "keyframes": [
+        {
+          "offsetUs": 0,
+          "view": [
+            0.1,
+            0.5,
+            0.126984126984127
+          ],
+          "transition": "cut",
+          "durationUs": 0
+        }
+      ],
+      "reasons": [
+        "contextualView",
+        "cutNoLeadTime"
+      ],
+      "score": {
+        "readability": 2.0,
+        "context": 1.2,
+        "motion": 2.6788685663767295,
+        "occlusion": 0.0,
+        "reversal": 0.0,
+        "cut": 0.6,
+        "frequency": 0.0,
+        "constraint": 0.0
+      }
+    }
+  ],
+  "preserved": [],
+  "removedAuto": [],
+  "diagnostics": [
+    "unknown_hand_footprint",
+    "pan_speed_budget",
+    "zoom_speed_budget"
+  ],
+  "warnings": [],
+  "metrics": {
+    "shots": 1,
+    "moves": 0,
+    "cuts": 1,
+    "fades": 0,
+    "averageHoldUs": 1000000,
+    "reversals": 0,
+    "uncovered": 0,
+    "readabilityWarnings": 0,
+    "occlusionWarnings": 0
+  }
+}

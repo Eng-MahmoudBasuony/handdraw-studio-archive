@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="rough"><feTurbulence baseFrequency="0.015" numOctaves="2" seed="7" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="1.4"/></filter>
+  </defs>
+  <g fill="none" stroke="#25221f" stroke-linecap="round" stroke-linejoin="round" filter="url(#rough)">
+    <path d="M610 185 C790 177 1115 179 1310 187" stroke="#1877d2" stroke-width="12" opacity=".92"/>
+    <path d="M658 202 C820 209 1085 210 1264 203" stroke="#1877d2" stroke-width="4" opacity=".65"/>
+  </g>
+  <text x="960" y="160" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="94" font-weight="800" letter-spacing="5" fill="#25221f" transform="rotate(-1 960 160)">DEPENDENCY HELL</text>
+  <text x="960" y="252" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="34" font-weight="600" fill="#5a3b21">When one package update breaks the whole project</text>
+</svg>

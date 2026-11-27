@@ -1,0 +1,98 @@
+{
+  "dependencyKey": "-75b7ea1ebe6ddb56",
+  "status": "completed",
+  "shots": [
+    {
+      "planId": "plan-0-stroke:small-text-0",
+      "targets": [
+        "stroke:small-text"
+      ],
+      "intervalUs": [
+        0,
+        300000
+      ],
+      "keyframes": [
+        {
+          "offsetUs": 0,
+          "view": [
+            0.1,
+            0.2,
+            0.126984126984127
+          ],
+          "transition": "cut",
+          "durationUs": 0
+        }
+      ],
+      "reasons": [
+        "contextualView",
+        "cutNoLeadTime"
+      ],
+      "score": {
+        "readability": 4.0,
+        "context": 1.2,
+        "motion": 2.7788685663767296,
+        "occlusion": 0.0,
+        "reversal": 0.0,
+        "cut": 0.6,
+        "frequency": 0.0,
+        "constraint": 0.0
+      }
+    },
+    {
+      "planId": "plan-300000-stroke:far-shape-1",
+      "targets": [
+        "stroke:far-shape"
+      ],
+      "intervalUs": [
+        300000,
+        1300000
+      ],
+      "keyframes": [
+        {
+          "offsetUs": 0,
+          "view": [
+            0.9,
+            0.8,
+            0.126984126984127
+          ],
+          "transition": "cut",
+          "durationUs": 0
+        }
+      ],
+      "reasons": [
+        "contextualView",
+        "cutNoLeadTime",
+        "largeJumpCut"
+      ],
+      "score": {
+        "readability": 2.0,
+        "context": 1.2,
+        "motion": 9.765625,
+        "occlusion": 0.0,
+        "reversal": 0.8,
+        "cut": 0.6,
+        "frequency": 0.0,
+        "constraint": 0.0
+      }
+    }
+  ],
+  "preserved": [],
+  "removedAuto": [],
+  "diagnostics": [
+    "unknown_hand_footprint",
+    "pan_speed_budget",
+    "zoom_speed_budget"
+  ],
+  "warnings": [],
+  "metrics": {
+    "shots": 2,
+    "moves": 0,
+    "cuts": 2,
+    "fades": 0,
+    "averageHoldUs": 650000,
+    "reversals": 0,
+    "uncovered": 0,
+    "readabilityWarnings": 0,
+    "occlusionWarnings": 0
+  }
+}
